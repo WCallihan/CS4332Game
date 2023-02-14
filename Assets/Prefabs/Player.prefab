@@ -508,8 +508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa10de08f67fd9841a76740ae4a93068, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerBody: {fileID: 3096262038924190597}
-  MouseSensitivity: 100
+  playerBody: {fileID: 3096262038924190597}
+  mouseSensitivity: 100
 --- !u!20 &3096262038733655762
 Camera:
   m_ObjectHideFlags: 0
@@ -613,15 +613,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32d0447ac86001e4c8fa3aca072cf237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _walkSpeed: 12
-  _sprintSpeed: 25
-  _groundCheck: {fileID: 3096262037202395195}
-  _groundMask:
+  walkSpeed: 12
+  sprintSpeed: 25
+  groundCheck: {fileID: 3096262037202395195}
+  groundMask:
     serializedVersion: 2
     m_Bits: 64
-  _gravity: -9.81
-  _jumpHeight: 3
-  _jumpSound: {fileID: 0}
+  gravity: -9.81
+  jumpHeight: 3
+  jumpSound: {fileID: 0}
 --- !u!114 &3096262038924190599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,15 +634,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee9b0690de58c8b45848214b8cf974df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
-  _healthBar: {fileID: 0}
-  _flashPanel: {fileID: 0}
-  _flashLength: 0
-  _hurtSound: {fileID: 0}
-  _playerVisuals:
+  maxHealth: 100
+  healthBar: {fileID: 0}
+  flashPanel: {fileID: 0}
+  flashLength: 0
+  hurtSound: {fileID: 0}
+  playerVisuals:
   - {fileID: 3096262037720326351}
   - {fileID: 3096262037840391082}
-  _deathSound: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &3096262038924190601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,20 +655,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f13911a9d5cef4d957f734f6f86dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerCamera: {fileID: 3096262038733655762}
-  _rayOrigin: {fileID: 3096262037572115757}
-  _weaponRange: 50
-  _lineMaxDuration: 0.1
-  _bulletDamage: 1
-  _bulletForce: 300
-  _shootBulletSound: {fileID: 0}
-  _rocketDamage: 3
-  _rocketForce: 1000
-  _rocketExplosionRadius: 2
-  _rocketCooldown: 3
-  _rocketPrefab: {fileID: 0}
-  _rocketCooldownSlider: {fileID: 0}
-  _shootRocketSound: {fileID: 0}
+  playerCamera: {fileID: 3096262038733655762}
+  rayOrigin: {fileID: 3096262037572115757}
+  weaponRange: 50
+  lineMaxDuration: 0.1
+  bulletDamage: 1
+  bulletForce: 300
+  shootBulletSound: {fileID: 0}
 --- !u!143 &3096262038924190594
 CharacterController:
   m_ObjectHideFlags: 0
