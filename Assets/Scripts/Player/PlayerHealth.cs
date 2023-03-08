@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour {
     public void TakeDamage(int damage) {
         currentHealth -= damage; //damage the player
         if(healthBar) healthBar.value = currentHealth; //update health bar
-        StartCoroutine(RedFlash()); //flash the screen red
+        //StartCoroutine(RedFlash()); //flash the screen red
         if(hurtSound) audioSource.PlayOneShot(hurtSound); //play hurt sound effect
         if(currentHealth <= 0) {
             Die(); //kill player
@@ -64,6 +64,7 @@ public class PlayerHealth : MonoBehaviour {
         //FindObjectOfType<Level01Controller>().DeathScreen(); //call level controller to enter death state
     }
 
+	/*
     private IEnumerator RedFlash() {
 		if(flashPanel == null) yield return null;
 
@@ -87,4 +88,5 @@ public class PlayerHealth : MonoBehaviour {
         //ensure alpha is back at 0
         flashPanel.color = new Color(255, 0, 0, 0);
     }
+	*/
 }
