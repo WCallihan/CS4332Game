@@ -6,7 +6,8 @@ public class EnemyShooting : MonoBehaviour {
 
     [Header("Raycast Settings")]
     [SerializeField] float weaponRange = 50f;
-    [SerializeField] Transform rayOrigin;
+    [SerializeField] Transform leftRayOrigin;
+    [SerializeField] Transform rightRayOrigin;
     [SerializeField] float lineMaxDuration = 0.1f;
 
     [Header("Weapons Settings")]
@@ -16,6 +17,7 @@ public class EnemyShooting : MonoBehaviour {
     [SerializeField] AudioClip shootingSound;
 
     private RaycastHit objectHit;
+	private Transform currentRayOrigin;
     private LineRenderer lineRenderer;
     private AudioSource audioSource;
     private bool playerSighted = false;
@@ -27,6 +29,7 @@ public class EnemyShooting : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
         Mathf.Clamp(weaponAccuracy, 0f, 100f); //clamps accuracy between 0% and 100%
         playerSighted = false;
+		currentRayOrigin = leftRayOrigin;
     }
 
     void Update() {
@@ -66,12 +69,12 @@ public class EnemyShooting : MonoBehaviour {
         float randY = Random.Range(-missRate, missRate) / 100;
         float randZ = Random.Range(-missRate, missRate) / 100;
         Vector3 actualRayDirection = perfectRayDirection + new Vector3(randX, randY, randZ); //makes a random direction based on weapon accuracy to make shooting unpredictable
-        Vector3 endPosition = rayOrigin.position + (actualRayDirection * weaponRange);
+        Vector3 endPosition = currentRayOrigin.position + (actualRayDirection * weaponRange);
 
-        lineRenderer.SetPosition(0, rayOrigin.position); //sets begining of visual line
+        lineRenderer.SetPosition(0, currentRayOrigin.position); //sets begining of visual line
 
         //shoot raycast
-        if(Physics.Raycast(rayOrigin.position, actualRayDirection, out objectHit, weaponRange)) {
+        if(Physics.Raycast(currentRayOrigin.position, actualRayDirection, out objectHit, weaponRange)) {
             lineRenderer.SetPosition(1, objectHit.point); //sets end of visual line if it hits
             //damage the player if they are hit
             PlayerHealth player = objectHit.transform.gameObject.GetComponent<PlayerHealth>();
@@ -80,7 +83,15 @@ public class EnemyShooting : MonoBehaviour {
         } else {
             lineRenderer.SetPosition(1, endPosition); //sets end of visual line if it misses
         }
+
         //play the shooting sound effect
         if(shootingSound) audioSource.PlayOneShot(shootingSound);
-    }
+
+		//switch the current ray origin
+		if(currentRayOrigin == leftRayOrigin) {
+			currentRayOrigin = rightRayOrigin;
+		} else {
+			currentRayOrigin = leftRayOrigin;
+		}
+	}
 }
