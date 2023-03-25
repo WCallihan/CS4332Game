@@ -7,6 +7,7 @@ public class Monitor : MonoBehaviour
 
     [Range(0, 15)]
     public int screenImage;
+	[SerializeField] private bool screenRandom;
 
     public bool on;
     public Transform screen;
@@ -16,6 +17,7 @@ public class Monitor : MonoBehaviour
     void Start()
     {
       rend = screen.GetComponent<Renderer>();
+		if(screenRandom) screenImage = Random.Range(0, 16);
     }
 
     // Update is called once per frame
