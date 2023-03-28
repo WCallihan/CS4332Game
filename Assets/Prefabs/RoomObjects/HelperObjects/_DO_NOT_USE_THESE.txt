@@ -1,0 +1,2 @@
+These objects have been put into the "Random" prefabs found in the RoomObjects folder.
+Use those instead for more variability in each room.
