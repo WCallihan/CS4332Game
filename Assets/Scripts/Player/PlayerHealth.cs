@@ -8,31 +8,43 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour {
 
     [Header("Health Settings")]
-    [SerializeField] int maxHealth = 100;
-    [SerializeField] Slider healthBar;
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private Slider healthBar;
+	[SerializeField] private Image healthFill;
+	[SerializeField] private Color normalHealthColor;
+	[SerializeField] private Color criticalHealthColor;
 
     [Header("Hurt Settings")]
-    [SerializeField] Image flashPanel;
-    [SerializeField] float flashLength;
-    [SerializeField] AudioClip hurtSound;
+    [SerializeField] private Image flashPanel;
+    [SerializeField] private float flashLength;
+	[SerializeField] private Transform playerCamera;
+	[SerializeField] private AnimationCurve cameraShakeCurve;
+	[SerializeField] private float cameraShakeDuration;
+    [SerializeField] private AudioClip hurtSound;
 
     [Header("Death Settings")]
-    [SerializeField] GameObject[] playerVisuals;
-    [SerializeField] AudioClip deathSound;
+    [SerializeField] private GameObject[] playerVisuals;
+    [SerializeField] private AudioClip deathSound;
 
     private AudioSource audioSource;
     private int currentHealth;
+	private bool healthCritical;
 
     void Awake() {
         audioSource = GetComponent<AudioSource>();
         currentHealth = maxHealth;
+		healthBar.maxValue = maxHealth;
+		healthBar.value = currentHealth;
     }
 
     public void TakeDamage(int damage) {
         currentHealth -= damage; //damage the player
         if(healthBar) healthBar.value = currentHealth; //update health bar
-        //StartCoroutine(RedFlash()); //flash the screen red
+        StartCoroutine(RedFlash()); //flash the screen red
+		StartCoroutine(CameraShake()); //shake the camera
         if(hurtSound) audioSource.PlayOneShot(hurtSound); //play hurt sound effect
+
+		SetHealthBarColor();
         if(currentHealth <= 0) {
             Die(); //kill player
         }
@@ -47,6 +59,8 @@ public class PlayerHealth : MonoBehaviour {
             }
 
             if(healthBar) healthBar.value = currentHealth; //update health bar
+			SetHealthBarColor();
+
             return true;
         //if the player is at full health, do nothing and return false
         } else {
@@ -64,7 +78,16 @@ public class PlayerHealth : MonoBehaviour {
         //FindObjectOfType<Level01Controller>().DeathScreen(); //call level controller to enter death state
     }
 
-	/*
+	private void SetHealthBarColor() {
+		if(!healthCritical && (currentHealth <= maxHealth / 3)) {
+			healthCritical = true;
+			healthFill.color = criticalHealthColor;
+		} else if(healthCritical && (currentHealth > maxHealth / 3)) {
+			healthCritical = false;
+			healthFill.color = normalHealthColor;
+		}
+	}
+
     private IEnumerator RedFlash() {
 		if(flashPanel == null) yield return null;
 
@@ -88,5 +111,22 @@ public class PlayerHealth : MonoBehaviour {
         //ensure alpha is back at 0
         flashPanel.color = new Color(255, 0, 0, 0);
     }
-	*/
+
+	private IEnumerator CameraShake() {
+		//save original position
+		Vector3 startPosition = playerCamera.transform.position;
+
+		//shake camera for duration
+		float timer = 0;
+		while(timer < cameraShakeDuration) {
+			//get the strength of the shake from the curve
+			float strength = cameraShakeCurve.Evaluate(timer / cameraShakeDuration);
+			playerCamera.transform.position = startPosition + Random.insideUnitSphere * strength;
+			timer += Time.deltaTime;
+			yield return null;
+		}
+
+		//set back to original position
+		playerCamera.transform.position = startPosition;
+	}
 }
