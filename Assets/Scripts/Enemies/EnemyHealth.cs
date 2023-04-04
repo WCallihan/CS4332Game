@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,8 @@ public class EnemyHealth : MonoBehaviour {
     private int currentHealth;
 
     private AudioSource audioSource;
-    //private Level01Controller _levelController;
+
+	public event Action EnemyDied;
 
     void Awake() {
         audioSource = GetComponent<AudioSource>();
@@ -20,7 +22,7 @@ public class EnemyHealth : MonoBehaviour {
 
     public void TakeDamage(int damage, string killedBy) {
         currentHealth -= damage; //damage the enemy
-        StartCoroutine(RedFlash()); //flash the enemy red
+        //StartCoroutine(RedFlash()); //flash the enemy red
         if(hurtSound) audioSource.PlayOneShot(hurtSound); //play hurt sound effect
         if(currentHealth <= 0) {
             Die(killedBy); //kill enemy
@@ -37,8 +39,10 @@ public class EnemyHealth : MonoBehaviour {
             Debug.Log("Bad killedBy variable: " + killedBy);
         }
         gameObject.SetActive(false); //deactivate game object
+		EnemyDied?.Invoke();
     }
 
+	/*
     private IEnumerator RedFlash() {
         Material enemyMaterial = enemyVisuals.GetComponent<Renderer>().material;
         Color originalColor = enemyMaterial.color;
@@ -46,4 +50,5 @@ public class EnemyHealth : MonoBehaviour {
         yield return new WaitForSeconds(0.15f); //wait
         enemyMaterial.color = originalColor; //set back to original color
     }
+	*/
 }
