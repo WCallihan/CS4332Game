@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 67647322913174769}
   - component: {fileID: 67647322913174768}
+  - component: {fileID: 7740610498751603700}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -46,6 +47,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseScreen: {fileID: 8009643412392673629}
+--- !u!114 &7740610498751603700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67647322913174783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac131ea1a7400d4a8f3439cf31ef0f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2370693395716611573
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +180,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6877008746698596476}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7740610498751603700}
+        m_TargetAssemblyTypeName: LevelChanger, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2705593530083718664
 GameObject:
   m_ObjectHideFlags: 0

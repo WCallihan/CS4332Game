@@ -23,26 +23,24 @@ public class EnemyHealth : MonoBehaviour {
         StartCoroutine(RedFlash()); //flash the enemy red
         if(hurtSound) audioSource.PlayOneShot(hurtSound); //play hurt sound effect
         if(currentHealth <= 0) {
-            //Die(killedBy); //kill enemy
+            Die(killedBy); //kill enemy
         }
     }
 
-	/*
     private void Die(string killedBy) {
         //increase the score based on what it was killed by
         if(killedBy.Equals("bullet") || killedBy.Equals("hazard")) {
-            _levelController.IncreaseScore(5);
+            //_levelController.IncreaseScore(5);
         } else if(killedBy.Equals("rocket")) {
-            _levelController.IncreaseScore(10);
+            //_levelController.IncreaseScore(10);
         } else {
             Debug.Log("Bad killedBy variable: " + killedBy);
         }
         gameObject.SetActive(false); //deactivate game object
     }
-	*/
 
     private IEnumerator RedFlash() {
-        Material enemyMaterial =enemyVisuals.GetComponent<Renderer>().material;
+        Material enemyMaterial = enemyVisuals.GetComponent<Renderer>().material;
         Color originalColor = enemyMaterial.color;
         enemyMaterial.color = Color.red; //set the enemy color to red
         yield return new WaitForSeconds(0.15f); //wait

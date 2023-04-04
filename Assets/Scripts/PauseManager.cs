@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour {
+public class PauseManager : MonoBehaviour {
 
     [SerializeField] private GameObject pauseScreen;
 
@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour {
 	}
 
     private void Update() {
+        //escape toggles the pause menu
         if(Input.GetKeyDown(KeyCode.Escape)) {
             if(paused) {
                 Unpause();
