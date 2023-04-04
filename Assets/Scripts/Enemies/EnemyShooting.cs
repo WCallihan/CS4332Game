@@ -16,6 +16,7 @@ public class EnemyShooting : MonoBehaviour {
     [SerializeField, Range(0, 100)] float weaponAccuracy; //100 = perfect accuracy, 0 = never going to hit
     [SerializeField] AudioClip shootingSound;
 
+    private GameObject player;
     private RaycastHit objectHit;
 	private Transform currentRayOrigin;
     private LineRenderer lineRenderer;
@@ -57,13 +58,14 @@ public class EnemyShooting : MonoBehaviour {
     public float GetWeaponRange() { return weaponRange; }
 
     //called by Enemy Movement to trigger the enemy to start shooting
-    public void PlayerSighted() {
+    public void PlayerSighted(GameObject p) {
         playerSighted = true;
+        player = p;
     }
 
     private void Shoot() {
         //calculate direction and probable end point of the bullet
-        Vector3 perfectRayDirection = transform.forward + new Vector3(-0.06f, 0, 0); //ray shoots forward with an offset to the left since the gun is on the right
+        Vector3 perfectRayDirection = (player.transform.position - currentRayOrigin.position).normalized; //perfect ray shoots directly from the gun to the player
         float missRate = 100 - weaponAccuracy;
         float randX = Random.Range(-missRate, missRate) / 100;
         float randY = Random.Range(-missRate, missRate) / 100;

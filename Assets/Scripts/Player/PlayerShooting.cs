@@ -70,13 +70,11 @@ public class PlayerShooting : MonoBehaviour {
         if(Physics.Raycast(rayOrigin.position, rayDirection, out objectHit, weaponRange)) {
             lineRenderer.SetPosition(1, objectHit.point); //sets end of visual line if it hits
 
-            /*
             //damage the enemy if one is hit
-            EnemyHealth enemy = _objectHit.transform.gameObject.GetComponent<EnemyHealth>();
-            enemy?.TakeDamage(_bulletDamage, "bullet");
+            EnemyHealth enemy = objectHit.transform.gameObject.GetComponent<EnemyHealth>();
+            enemy?.TakeDamage(bulletDamage, "bullet");
             //push the enemy back a little bit
-            enemy?.GetComponent<Rigidbody>().AddForceAtPosition(rayDirection.normalized * _bulletForce, _objectHit.point, ForceMode.Impulse);
-            */
+            enemy?.GetComponent<Rigidbody>().AddForceAtPosition(rayDirection.normalized * bulletForce, objectHit.point, ForceMode.Impulse);
 
         } else {
             lineRenderer.SetPosition(1, endPosition); //sets end of visual line if it misses

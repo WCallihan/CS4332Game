@@ -28,7 +28,7 @@ public class EnemyMovement : MonoBehaviour {
         //player is sighted if they come within weapon range
         if(!playerSighted && Vector3.Distance(transform.position, player.transform.position) <= weaponRange) {
             playerSighted = true;
-            enemyShooting.PlayerSighted(); //tells the shooter to start shooting
+            enemyShooting.PlayerSighted(player); //tells the shooter to start shooting
         }
 
         //if the enemy has not seen the player, move towards the current patrol waypoint
