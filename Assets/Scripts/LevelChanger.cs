@@ -13,6 +13,9 @@ public class LevelChanger : MonoBehaviour {
          *          move the player singleton to the scene's player starting position
          *          and do other stuff as necessary
          */
+
+        int index = Random.Range(1, 4);
+        SceneManager.LoadScene("Room" + index);
         Debug.Log("Starting new level");
     }
 
@@ -20,7 +23,8 @@ public class LevelChanger : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
-            SceneManager.LoadScene("TestingScene");
+            int index = Random.Range(1, 4);
+            SceneManager.LoadScene("Room" + index);
         }
     }
 
