@@ -16,6 +16,14 @@ public class LevelChanger : MonoBehaviour {
         Debug.Log("Starting new level");
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            SceneManager.LoadScene("TestingScene");
+        }
+    }
+
     //called by the MenuButton on the PauseScreen
     public void GoToMainMenu() {
         SceneManager.LoadScene("MainMenu");
