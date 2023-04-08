@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class EnemyWaveSpawner : MonoBehaviour {
 	private int currentWave;
 	private int totalWaveEnemies;
 	private int waveEnemiesKilled;
+
+	public event Action AllEnemiesDead;
 
 	private void Awake() {
 		currentWave = 0;
@@ -35,6 +38,10 @@ public class EnemyWaveSpawner : MonoBehaviour {
 			//since the wave is over, spawn the next one if there is one
 			if(currentWave == 1) {
 				StartCoroutine(SpawnWaveDelay(enemyWave2));
+			} else if(currentWave == 2) {
+				AllEnemiesDead?.Invoke();
+			} else {
+				Debug.LogError("currentWave has invalid value:" + currentWave);
 			}
 		}
 	}

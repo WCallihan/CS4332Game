@@ -114,19 +114,19 @@ public class PlayerHealth : MonoBehaviour {
 
 	private IEnumerator CameraShake() {
 		//save original position
-		Vector3 startPosition = playerCamera.transform.position;
+		Vector3 startPosition = playerCamera.transform.localPosition;
 
 		//shake camera for duration
 		float timer = 0;
 		while(timer < cameraShakeDuration) {
 			//get the strength of the shake from the curve
 			float strength = cameraShakeCurve.Evaluate(timer / cameraShakeDuration);
-			playerCamera.transform.position = startPosition + Random.insideUnitSphere * strength;
+			playerCamera.transform.localPosition = startPosition + Random.insideUnitSphere * strength;
 			timer += Time.deltaTime;
 			yield return null;
 		}
 
 		//set back to original position
-		playerCamera.transform.position = startPosition;
+		playerCamera.transform.localPosition = startPosition;
 	}
 }

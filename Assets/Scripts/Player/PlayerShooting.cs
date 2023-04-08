@@ -15,7 +15,6 @@ public class PlayerShooting : MonoBehaviour {
 
     [Header("Weapon Settings")]
     [SerializeField] int bulletDamage = 1;
-    [SerializeField] float bulletForce = 300f;
     [SerializeField] AudioClip shootBulletSound;
     /*
     [SerializeField] int grenadeDamage = 3;
@@ -73,9 +72,6 @@ public class PlayerShooting : MonoBehaviour {
             //damage the enemy if one is hit
             EnemyHealth enemy = objectHit.transform.gameObject.GetComponent<EnemyHealth>();
             enemy?.TakeDamage(bulletDamage, "bullet");
-            //push the enemy back a little bit
-            enemy?.GetComponent<Rigidbody>().AddForceAtPosition(rayDirection.normalized * bulletForce, objectHit.point, ForceMode.Impulse);
-
         } else {
             lineRenderer.SetPosition(1, endPosition); //sets end of visual line if it misses
         }
