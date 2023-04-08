@@ -203,7 +203,7 @@ MonoBehaviour:
   rightRayOrigin: {fileID: 1952912679384612142}
   lineMaxDuration: 0.1
   attackCooldown: 1
-  weaponDamage: 20
+  weaponDamage: 2
   weaponAccuracy: 80
   shootingSound: {fileID: 0}
 --- !u!135 &7151776504917662643
