@@ -9,10 +9,21 @@ public class MusicPlayer : MonoBehaviour {
 
 	private AudioSource audioSource;
 
+	//singleton instance variables
+	private static MusicPlayer instance;
+	public static MusicPlayer Instance { get { return instance; } }
+
 	private void Awake() {
 		audioSource = GetComponent<AudioSource>();
 		StartMenuMusic();
-		//TODO: make into a singleton
+
+		//singleton logic
+		DontDestroyOnLoad(gameObject);
+		if(instance != null && instance != this) {
+			Destroy(gameObject);
+		} else {
+			instance = this;
+		}
 	}
 
 	private void Update() {

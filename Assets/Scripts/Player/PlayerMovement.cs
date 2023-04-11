@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //this script is placed on the Player character to control its movement and jumping
 
@@ -24,10 +25,31 @@ public class PlayerMovement : MonoBehaviour {
     private bool hasDoubleJumped = false;
     private bool wasSprintingWhenJumped = false;
 
-    void Awake() {
+	//singleton instance variables
+	private static PlayerMovement instance;
+	public static PlayerMovement Instance { get { return instance; } }
+
+	void Awake() {
         characterController = GetComponent<CharacterController>();
         audioSource = GetComponent<AudioSource>();
-    }
+
+		//singleton logic
+		DontDestroyOnLoad(gameObject);
+		if(instance != null && instance != this) {
+			//move the already exsisting player to this player's spot; used when starting a new level
+			Instance.gameObject.transform.position = gameObject.transform.position;
+			Instance.gameObject.transform.rotation = gameObject.transform.rotation;
+			//destroy this player
+			Destroy(gameObject);
+		} else {
+			instance = this;
+		}
+		
+		//if the game is in the menu, destroy the player regardless
+		if(SceneManager.GetActiveScene().name.Equals("MainMenu")) {
+			Destroy(gameObject);
+		}
+	}
 
     void Update() {
         //check if on ground
