@@ -26,7 +26,7 @@ public class LevelChanger : MonoBehaviour {
          *          and do other stuff as necessary
          */
 
-        int index = Random.Range(1, 4);
+        int index = Random.Range(1, 5);
         SceneManager.LoadScene("Room" + index);
         Debug.Log("Starting new level");
     }
