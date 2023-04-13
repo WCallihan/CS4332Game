@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LevelChanger : MonoBehaviour {
 
+    [SerializeField] private AudioClip unlockingSound;
+
 	private EnemyWaveSpawner enemies;
+    private AudioSource audioSource;
 	private bool doorUnlocked;
 
 	private void Awake() {
-		doorUnlocked = false;
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
+        doorUnlocked = false;
 	}
 
 	private void Start() {
@@ -33,6 +38,8 @@ public class LevelChanger : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
 
+        Debug.Log("trigger enter");
+
 		PlayerPickups player = other.GetComponent<PlayerPickups>();
 
 		if(player != null) {
@@ -51,6 +58,7 @@ public class LevelChanger : MonoBehaviour {
 
 	private void UnlockDoor() {
 		doorUnlocked = true;
+        if(unlockingSound) audioSource.PlayOneShot(unlockingSound);
 	}
 
 	//called by the MenuButton on the PauseScreen

@@ -32,6 +32,7 @@ public class PlayerHealth : MonoBehaviour {
 
     void Awake() {
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
         currentHealth = maxHealth;
 		healthBar.maxValue = maxHealth;
 		healthBar.value = currentHealth;

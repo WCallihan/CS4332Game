@@ -33,6 +33,7 @@ public class PlayerShooting : MonoBehaviour {
     void Awake() {
         lineRenderer = GetComponent<LineRenderer>();
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
         canShoot = true;
     }
 

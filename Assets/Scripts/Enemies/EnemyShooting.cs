@@ -28,6 +28,7 @@ public class EnemyShooting : MonoBehaviour {
     void Awake() {
         lineRenderer = GetComponent<LineRenderer>();
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
         Mathf.Clamp(weaponAccuracy, 0f, 100f); //clamps accuracy between 0% and 100%
         playerSighted = false;
 		currentRayOrigin = leftRayOrigin;
