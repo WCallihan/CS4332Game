@@ -7,11 +7,19 @@ public class PlayerPickups : MonoBehaviour {
 	[SerializeField] private GameObject doorLockedPrompt;
 	[SerializeField] private GameObject doorUnlockedPrompt;
 	[SerializeField] private GameObject lootButtonPrompt;
-    private bool canEnterDoor;
-	private LevelChanger levelChanger;
-	private bool inLootTrigger;
+    [SerializeField] private AudioClip lootPickupSound;
 
-	private void Update() {
+	private LevelChanger levelChanger;
+    private AudioSource audioSource;
+    private bool canEnterDoor;
+    private bool inLootTrigger;
+
+    private void Awake() {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
+}
+
+    private void Update() {
 		if(Input.GetKeyDown(KeyCode.F)) {
 			if(canEnterDoor) {
 				levelChanger.StartNewLevel();

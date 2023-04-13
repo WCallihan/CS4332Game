@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Awake() {
         characterController = GetComponent<CharacterController>();
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
 
 		//singleton logic
 		DontDestroyOnLoad(gameObject);
