@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   enemyVisuals: {fileID: 5339788131418060458}
-  hurtSound: {fileID: 0}
+  hurtSound: {fileID: 8300000, guid: 665f818d1ba08f948b14dd30caa394b1, type: 3}
 --- !u!114 &5339788131370727951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   attackCooldown: 1
   weaponDamage: 2
   weaponAccuracy: 80
-  shootingSound: {fileID: 0}
+  shootingSound: {fileID: 8300000, guid: e13df305808c2a348baef228cdc3bee6, type: 3}
 --- !u!135 &7151776504917662643
 SphereCollider:
   m_ObjectHideFlags: 0

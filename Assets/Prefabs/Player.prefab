@@ -794,7 +794,7 @@ MonoBehaviour:
     m_Bits: 64
   gravity: -9.81
   jumpHeight: 3
-  jumpSound: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: 579155170c98cce43b36f287a425459d, type: 3}
 --- !u!114 &3096262038924190599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,11 +849,11 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   cameraShakeDuration: 0.5
-  hurtSound: {fileID: 0}
+  hurtSound: {fileID: 8300000, guid: 1f27daf07e0432843ae57f71e864fd1c, type: 3}
   playerVisuals:
   - {fileID: 3096262037720326351}
   - {fileID: 3096262037840391082}
-  deathSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 538ec5ff7043216468d07599aad4495d, type: 3}
 --- !u!114 &3096262038924190601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,7 +871,7 @@ MonoBehaviour:
   weaponRange: 50
   lineMaxDuration: 0.1
   bulletDamage: 1
-  shootBulletSound: {fileID: 0}
+  shootBulletSound: {fileID: 8300000, guid: 67ae8da371822e148867842bcb9cbb3e, type: 3}
 --- !u!114 &4724791664236592873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -887,6 +887,7 @@ MonoBehaviour:
   doorLockedPrompt: {fileID: 1323701993779081764}
   doorUnlockedPrompt: {fileID: 9064682532273420822}
   lootButtonPrompt: {fileID: 424760192673888381}
+  lootPickupSound: {fileID: 8300000, guid: 66122144ee0ab734f8c2921b48e094d1, type: 3}
 --- !u!143 &3096262038924190594
 CharacterController:
   m_ObjectHideFlags: 0
