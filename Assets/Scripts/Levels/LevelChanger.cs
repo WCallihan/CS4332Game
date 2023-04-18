@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,11 +11,24 @@ public class LevelChanger : MonoBehaviour {
 	private EnemyWaveSpawner enemies;
     private AudioSource audioSource;
 	private bool doorUnlocked;
+    private static bool gameStarted;
+
+    public static event Action MenuStarted;
+    public static event Action GameStarted;
 
 	private void Awake() {
         audioSource = GetComponent<AudioSource>();
-        audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
+        if(audioSource) audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
         doorUnlocked = false;
+
+        //invoke game events for the music player
+        if(SceneManager.GetActiveScene().name == "MainMenu") {
+            MenuStarted?.Invoke();
+            gameStarted = false;
+        } else if(!gameStarted) {
+            GameStarted?.Invoke();
+            gameStarted = true;
+        }
 	}
 
 	private void Start() {
@@ -24,15 +38,23 @@ public class LevelChanger : MonoBehaviour {
 
 	//called by the PlayButton on the MainMenu and by interacting with ending doors in all room levels
 	public void StartNewLevel() {
-        /*
-         * TODO: choose a random new room that you're not currently in out of the list of room scenes
-         *          load the new scene and update scoring on the player singleton
-         *          move the player singleton to the scene's player starting position
-         *          and do other stuff as necessary
-         */
+        //invoke game started event for music player
+        if(!gameStarted) {
+            GameStarted?.Invoke();
+            gameStarted = true;
+        }
 
-        int index = Random.Range(1, 5);
-        SceneManager.LoadScene("Room" + index);
+        //find new room to load and make sure sure it's different than the current one
+        string newRoom;
+        string currentRoom = SceneManager.GetActiveScene().name;
+        do {
+            int index = UnityEngine.Random.Range(1, 5);
+            newRoom = "Room" + index;
+        } while(newRoom == currentRoom);
+
+        //TODO: update player score if not coming from the menu
+
+        SceneManager.LoadScene(newRoom);
         Debug.Log("Starting new level");
     }
 
@@ -58,7 +80,7 @@ public class LevelChanger : MonoBehaviour {
 
 	private void UnlockDoor() {
 		doorUnlocked = true;
-        if(unlockingSound) audioSource.PlayOneShot(unlockingSound);
+        if(unlockingSound && audioSource) audioSource.PlayOneShot(unlockingSound);
 	}
 
 	//called by the MenuButton on the PauseScreen

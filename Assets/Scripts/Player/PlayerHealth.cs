@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,6 +30,8 @@ public class PlayerHealth : MonoBehaviour {
     private AudioSource audioSource;
     private int currentHealth;
 	private bool healthCritical;
+
+    public static event Action PlayerDied;
 
     void Awake() {
         audioSource = GetComponent<AudioSource>();
@@ -76,7 +79,8 @@ public class PlayerHealth : MonoBehaviour {
             v.SetActive(false);
         }
         if(deathSound) audioSource.PlayOneShot(deathSound); //play death sound effect
-        //FindObjectOfType<Level01Controller>().DeathScreen(); //call level controller to enter death state
+        PlayerDied?.Invoke(); //call player death event for music player
+        //TODO: show death screen
     }
 
 	private void SetHealthBarColor() {
@@ -122,7 +126,7 @@ public class PlayerHealth : MonoBehaviour {
 		while(timer < cameraShakeDuration) {
 			//get the strength of the shake from the curve
 			float strength = cameraShakeCurve.Evaluate(timer / cameraShakeDuration);
-			playerCamera.transform.localPosition = startPosition + Random.insideUnitSphere * strength;
+			playerCamera.transform.localPosition = startPosition + UnityEngine.Random.insideUnitSphere * strength;
 			timer += Time.deltaTime;
 			yield return null;
 		}
