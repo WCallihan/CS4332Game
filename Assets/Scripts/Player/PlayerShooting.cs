@@ -47,7 +47,8 @@ public class PlayerShooting : MonoBehaviour {
         audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
         canShoot = true;
         numRockets = initRockets;
-        if(numRockets > 0) rocketArt.SetActive(true);
+		if(numRockets > 0) rocketArt.SetActive(true);
+		else rocketArt.SetActive(false);
     }
 
     void Update() {
@@ -113,7 +114,7 @@ public class PlayerShooting : MonoBehaviour {
         //spawn the rocket prefab
         GameObject rocket = Instantiate(rocketPrefab, rocketSpawnPos.position, Quaternion.LookRotation(rocketDirection));
         //assign rocket values based on player settings
-        //rocket.GetComponent<Rocket>().SetRocket(_rocketDamage, _rocketForce, _rocketExplosionRadius, rocketDirection);
+        rocket.GetComponent<Rocket>().SetRocket(rocketDamage, rocketForce, rocketExplosionRadius, rocketDirection);
         //play shooting sound effect
         if(shootRocketSound) audioSource.PlayOneShot(shootRocketSound);
 

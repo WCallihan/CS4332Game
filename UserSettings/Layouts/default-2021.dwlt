@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 74
+  controlID: 96
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 29
+  controlID: 54
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 39
+  controlID: 55
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 40
+  controlID: 56
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,8 +319,8 @@ MonoBehaviour:
     y: 0
     width: 451
     height: 939
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -495,7 +495,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.666666}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -643,9 +643,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 17.421288, y: 4.8420916, z: 3.0361984}
+    m_Target: {x: 0.23562771, y: 1.2702167, z: -1.0309035}
     speed: 2
-    m_Value: {x: 17.421288, y: 4.8420916, z: 3.0361984}
+    m_Value: {x: 0.23562771, y: 1.2702167, z: -1.0309035}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -692,13 +692,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.011364308, y: 0.97193825, z: -0.23013508, w: -0.0478568}
+    m_Target: {x: 0.009887539, y: -0.9670675, z: 0.25146833, w: 0.038020913}
     speed: 2
-    m_Value: {x: -0.011364307, y: 0.97193825, z: -0.23013507, w: -0.0478568}
+    m_Value: {x: 0.009887543, y: -0.9670679, z: 0.25146845, w: 0.038020927}
   m_Size:
-    m_Target: 2.4907012
+    m_Target: 1.9348834
     speed: 2
-    m_Value: 2.4907012
+    m_Value: 1.9348834
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -756,7 +756,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 0cfbffff
+      m_ExpandedIDs: 44f8ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -821,22 +821,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Audio/Music
+    - Assets/Audio/SFX
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Audio/Music
+  - Assets/Audio/SFX
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\willi\Unity_Projects\CS4332Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 1c660000
-    m_LastClickedID: 26140
-    m_ExpandedIDs: 000000007c6500007e65000080650000826500008465000086650000886500008a6500008c6500008e650000b8650000ba65000000ca9a3b
+    m_SelectedIDs: 56670000
+    m_LastClickedID: 26454
+    m_ExpandedIDs: 00000000126700001467000016670000186700001a6700001c6700001e6700002067000022670000246700005067000054670000ba670000be670000c267000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -864,7 +864,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c6500007e65000080650000826500008465000086650000886500008a6500008c6500008e650000
+    m_ExpandedIDs: 00000000126700001467000016670000186700001a6700001c6700001e670000206700002267000024670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
