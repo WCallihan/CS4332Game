@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3096262038924190601, guid: a4fe5a960b08e9847b7a635d405f5d22, type: 3}
+      propertyPath: initRockets
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3692755738260600217, guid: a4fe5a960b08e9847b7a635d405f5d22, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

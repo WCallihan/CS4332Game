@@ -10,11 +10,13 @@ public class PlayerPickups : MonoBehaviour {
     [SerializeField] private AudioClip lootPickupSound;
 
 	private LevelChanger levelChanger;
+    private PlayerShooting playerShoot;
     private AudioSource audioSource;
     private bool canEnterDoor;
     private bool inLootTrigger;
 
     private void Awake() {
+        playerShoot = GetComponent<PlayerShooting>();
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
 }
@@ -25,7 +27,8 @@ public class PlayerPickups : MonoBehaviour {
 				levelChanger.StartNewLevel();
 				ExitDoorTrigger();
 			} else if(inLootTrigger) {
-				//TODO: call the loot's pickup function
+                //TODO: destroy loot object
+                playerShoot.AddRocket();
 			}
 		}
 	}
@@ -48,5 +51,13 @@ public class PlayerPickups : MonoBehaviour {
 		doorUnlockedPrompt.SetActive(false);
 	}
 
-	//TODO: deal with going in and out of loot triggers
+	public void EnterLootTrigger() {
+        inLootTrigger = true;
+        //TODO: grab reference to loot
+    }
+
+    public void ExitLootTrigger() {
+        inLootTrigger = false;
+        //TODO: clear reference to loot
+    }
 }
