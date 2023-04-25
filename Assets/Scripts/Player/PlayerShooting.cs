@@ -16,25 +16,38 @@ public class PlayerShooting : MonoBehaviour {
     [Header("Weapon Settings")]
     [SerializeField] int bulletDamage = 1;
     [SerializeField] AudioClip shootBulletSound;
-    /*
-    [SerializeField] int grenadeDamage = 3;
-    [SerializeField] float grenadeForce = 1000f;
-    [SerializeField] float grenadeExplosionRadius = 2f;
-    [SerializeField] GameObject grenadePrefab;
-    [SerializeField] AudioClip throwGrenadeSound;
-    */
+    
+    [SerializeField] int rocketDamage = 3;
+    [SerializeField] float rocketForce = 1000f;
+    [SerializeField] float rocketExplosionRadius = 2f;
+    [SerializeField] GameObject rocketPrefab;
+    [SerializeField] Transform rocketSpawnPos;
+    [SerializeField] AudioClip shootRocketSound;
+    [SerializeField] GameObject rocketArt;
+    [SerializeField] int initRockets = 0;
 
     private RaycastHit objectHit;
     private LineRenderer lineRenderer;
     private AudioSource audioSource;
     private float lineTimer = 0f;
     private bool canShoot;
+    private int numRockets;
+
+    private void OnEnable() {
+        PauseManager.GamePaused += SetShooting;
+    }
+
+    private void OnDisable() {
+        PauseManager.GamePaused -= SetShooting;
+    }
 
     void Awake() {
         lineRenderer = GetComponent<LineRenderer>();
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
         canShoot = true;
+        numRockets = initRockets;
+        if(numRockets > 0) rocketArt.SetActive(true);
     }
 
     void Update() {
@@ -46,6 +59,10 @@ public class PlayerShooting : MonoBehaviour {
             lineTimer = lineMaxDuration; //reset line timer whenever a bullet it fired
             FireBullet();
         }
+        //on right click, fire a rocket if you have any
+        if(Input.GetKeyDown(KeyCode.Mouse1) && numRockets > 0) {
+            FireRocket();
+        }
 
         //disable line renderer after max duration to make line disappear
         lineTimer -= Time.deltaTime;
@@ -55,8 +72,8 @@ public class PlayerShooting : MonoBehaviour {
     }
 
     //used by the level controller to make sure that the player can't shoot when the game isn't running
-    public void SetShooting(bool canShoot) {
-        this.canShoot = canShoot;
+    public void SetShooting(bool gamePaused) {
+        canShoot = !gamePaused;
     }
 
     private void FireBullet() {
@@ -80,22 +97,28 @@ public class PlayerShooting : MonoBehaviour {
         if(shootBulletSound) audioSource.PlayOneShot(shootBulletSound);
     }
 
+    public void AddRocket() {
+        numRockets++;
+        rocketArt.SetActive(true);
+    }
+
     //old function that was used to fire a rocket that went straight
-    //TODO: change later to throw a grenade prefab
-    /*
     private void FireRocket() {
-		if(grenadePrefab == null) return;
+		if(rocketPrefab == null) return;
 
         //calculate direction of the rocket
         Vector3 rocketDirection = playerCamera.transform.forward; //same as bullet raycast direction
         Quaternion rocketRotation = Quaternion.identity; //instantiation doesn't matter
         rocketRotation.eulerAngles = rocketDirection; //spawning direction of the rocket based on look direction
         //spawn the rocket prefab
-        GameObject rocket = Instantiate(grenadePrefab, rayOrigin.position, Quaternion.LookRotation(rocketDirection));
+        GameObject rocket = Instantiate(rocketPrefab, rocketSpawnPos.position, Quaternion.LookRotation(rocketDirection));
         //assign rocket values based on player settings
         //rocket.GetComponent<Rocket>().SetRocket(_rocketDamage, _rocketForce, _rocketExplosionRadius, rocketDirection);
         //play shooting sound effect
-        if(throwGrenadeSound) audioSource.PlayOneShot(throwGrenadeSound);
+        if(shootRocketSound) audioSource.PlayOneShot(shootRocketSound);
+
+        //remove a rocket
+        numRockets--;
+        if(numRockets <= 0) rocketArt.SetActive(false);
     }
-    */
 }

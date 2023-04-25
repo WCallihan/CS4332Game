@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class PauseManager : MonoBehaviour {
     [SerializeField] private GameObject pauseScreen;
 
     private bool paused;
+
+    public static event Action<bool> GamePaused;
 
 	private void Awake() {
         Unpause();
@@ -34,6 +37,8 @@ public class PauseManager : MonoBehaviour {
         //unlock and show mouse
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        //send out event
+        GamePaused?.Invoke(true);
     }
 
     //called by pause input and by the Resume button on PauseScreen
@@ -45,6 +50,8 @@ public class PauseManager : MonoBehaviour {
         //lock and hide mouse during gameplay
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        //send out event
+        GamePaused?.Invoke(false);
         //set the pause flag
         paused = false;
     }
