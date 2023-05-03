@@ -34,11 +34,11 @@ public class PlayerShooting : MonoBehaviour {
     private int numRockets;
 
     private void OnEnable() {
-        PauseManager.GamePaused += SetShooting;
+        UIManager.GamePaused += SetShooting;
     }
 
     private void OnDisable() {
-        PauseManager.GamePaused -= SetShooting;
+        UIManager.GamePaused -= SetShooting;
     }
 
     void Awake() {

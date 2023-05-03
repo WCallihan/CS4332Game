@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QuitGame : MonoBehaviour {
 	
-    //called by the QuitButton on the MainMenu
+    //called by the QuitButton on the MainMenu and DeathScreen
     public void Quit() {
         //if Unity Editor is being used, stop playing
         #if UNITY_EDITOR

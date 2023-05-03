@@ -3,16 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseManager : MonoBehaviour {
+public class UIManager : MonoBehaviour {
 
     [SerializeField] private GameObject pauseScreen;
+	[SerializeField] private GameObject deathScreen;
 
     private bool paused;
 
     public static event Action<bool> GamePaused;
 
+	private void OnEnable() {
+		PlayerHealth.PlayerDied += ShowDeath;
+	}
+
+	private void OnDisable() {
+		PlayerHealth.PlayerDied -= ShowDeath;
+	}
+
 	private void Awake() {
         Unpause();
+		deathScreen.SetActive(false);
 	}
 
     private void Update() {
@@ -55,4 +65,16 @@ public class PauseManager : MonoBehaviour {
         //set the pause flag
         paused = false;
     }
+
+	private void ShowDeath() {
+		//freeze time
+		Time.timeScale = 0;
+		//show the death screen
+		deathScreen.SetActive(true);
+		//unlock and show mouse
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.None;
+		//reuse game paused event since it does the same thing
+		GamePaused?.Invoke(true);
+	}
 }

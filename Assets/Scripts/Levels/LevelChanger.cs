@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelChanger : MonoBehaviour {
 
     [SerializeField] private AudioClip unlockingSound;
+	[SerializeField] private Animator levelFadeAnimator;
 
 	private EnemyWaveSpawner enemies;
     private AudioSource audioSource;
@@ -36,32 +37,7 @@ public class LevelChanger : MonoBehaviour {
 		if(enemies != null) enemies.AllEnemiesDead += UnlockDoor;
 	}
 
-	//called by the PlayButton on the MainMenu and by interacting with ending doors in all room levels
-	public void StartNewLevel() {
-        //invoke game started event for music player
-        if(!gameStarted) {
-            GameStarted?.Invoke();
-            gameStarted = true;
-        }
-
-        //find new room to load and make sure sure it's different than the current one
-        string newRoom;
-        string currentRoom = SceneManager.GetActiveScene().name;
-        do {
-            int index = UnityEngine.Random.Range(1, 5);
-            newRoom = "Room" + index;
-        } while(newRoom == currentRoom);
-
-        //TODO: update player score if not coming from the menu
-
-        SceneManager.LoadScene(newRoom);
-        Debug.Log("Starting new level");
-    }
-
     void OnTriggerEnter(Collider other) {
-
-        Debug.Log("trigger enter");
-
 		PlayerPickups player = other.GetComponent<PlayerPickups>();
 
 		if(player != null) {
@@ -70,12 +46,42 @@ public class LevelChanger : MonoBehaviour {
     }
 
 	private void OnTriggerExit(Collider other) {
-
 		PlayerPickups player = other.GetComponent<PlayerPickups>();
 
 		if(player != null) {
 			player.ExitDoorTrigger();
 		}
+	}
+
+	//called by the PlayButton on the MainMenu and by interacting with ending doors in all room levels
+	public void StartNewLevel() {
+		//invoke game started event for music player
+		if(!gameStarted) {
+			GameStarted?.Invoke();
+			gameStarted = true;
+		}
+
+		//find new room to load and make sure sure it's different than the current one
+		string newRoom;
+		string currentRoom = SceneManager.GetActiveScene().name;
+		do {
+			int index = UnityEngine.Random.Range(1, 5);
+			newRoom = "Room" + index;
+		} while(newRoom == currentRoom);
+
+		//TODO: update player score if not coming from the menu
+
+		StartCoroutine(StartNewLevelDelay(newRoom));
+	}
+
+	private IEnumerator StartNewLevelDelay(string newRoom) {
+		//start fade out animation; fade in animation is played automatically when a level is loaded
+		levelFadeAnimator.SetTrigger("FadeOut");
+		//delay for just long enough to fade to black
+		yield return new WaitForSeconds(0.5f);
+		//load new level; all other logic is handled in various OnAwake functions
+		SceneManager.LoadScene(newRoom);
+		Debug.Log("Starting new level");
 	}
 
 	private void UnlockDoor() {
