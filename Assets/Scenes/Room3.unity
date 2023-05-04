@@ -2789,6 +2789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingSound: {fileID: 0}
+  levelFadeAnimator: {fileID: 0}
 --- !u!1001 &836511515
 PrefabInstance:
   m_ObjectHideFlags: 0
