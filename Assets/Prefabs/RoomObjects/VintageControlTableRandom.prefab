@@ -207,6 +207,18 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6149998764931075943, guid: 2f34f8a812928c04ba4ee9367cbaf1b5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149998764931075943, guid: 2f34f8a812928c04ba4ee9367cbaf1b5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149998764931075943, guid: 2f34f8a812928c04ba4ee9367cbaf1b5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149998764931075943, guid: 2f34f8a812928c04ba4ee9367cbaf1b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -320,6 +332,10 @@ PrefabInstance:
     - target: {fileID: 8004892050912865788, guid: 8cff97847cc68b9488390372eae20717, type: 3}
       propertyPath: m_Name
       value: VintageControlTable1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8004892050912865788, guid: 8cff97847cc68b9488390372eae20717, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cff97847cc68b9488390372eae20717, type: 3}

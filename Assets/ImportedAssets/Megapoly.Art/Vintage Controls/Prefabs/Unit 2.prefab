@@ -141,6 +141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallMonitorFrame
       objectReference: {fileID: 0}
+    - target: {fileID: 1412485920345456287, guid: 8e185173dceb02e4db7be07e971bba75, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5687329867711754762, guid: 8e185173dceb02e4db7be07e971bba75, type: 3}
       propertyPath: m_Enabled
       value: 0
