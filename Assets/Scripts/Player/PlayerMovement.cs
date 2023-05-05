@@ -29,7 +29,15 @@ public class PlayerMovement : MonoBehaviour {
 	private static PlayerMovement instance;
 	public static PlayerMovement Instance { get { return instance; } }
 
-	void Awake() {
+    private void OnEnable() {
+        LevelChanger.MenuStarted += DestroyPlayer;
+    }
+
+    private void OnDisable() {
+        LevelChanger.MenuStarted -= DestroyPlayer;
+    }
+
+    void Awake() {
         characterController = GetComponent<CharacterController>();
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
@@ -44,11 +52,6 @@ public class PlayerMovement : MonoBehaviour {
 			Destroy(gameObject);
 		} else {
 			instance = this;
-		}
-		
-		//if the game is in the menu, destroy the player regardless
-		if(SceneManager.GetActiveScene().name.Equals("MainMenu")) {
-			Destroy(gameObject);
 		}
 	}
 
@@ -97,5 +100,10 @@ public class PlayerMovement : MonoBehaviour {
         //simulate gravity
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
+    }
+
+    //destroys the player game object; used when the main menu is launched
+    private void DestroyPlayer() {
+        Destroy(gameObject);
     }
 }

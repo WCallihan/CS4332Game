@@ -34,9 +34,7 @@ public class EnemyHealth : MonoBehaviour {
     private void Die(string killedBy) {
         //increase the score based on what it was killed by
         if(killedBy.Equals("bullet") || killedBy.Equals("hazard")) {
-            //_levelController.IncreaseScore(5);
         } else if(killedBy.Equals("rocket")) {
-            //_levelController.IncreaseScore(10);
         } else {
             Debug.Log("Bad killedBy variable: " + killedBy);
         }

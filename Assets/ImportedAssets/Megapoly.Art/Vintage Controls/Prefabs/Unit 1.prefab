@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7381066019692852697, guid: 1bfad8f77e7256140b600108dacca681, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8513488488885145270, guid: 1bfad8f77e7256140b600108dacca681, type: 3}
       propertyPath: m_RootOrder
       value: 9
