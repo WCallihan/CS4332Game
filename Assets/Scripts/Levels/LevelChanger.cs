@@ -74,14 +74,14 @@ public class LevelChanger : MonoBehaviour {
 		StartCoroutine(StartNewLevelDelay(newRoom));
 	}
 
-	private IEnumerator StartNewLevelDelay(string newRoom) {
+	private IEnumerator StartNewLevelDelay(string newLevel) {
 		//start fade out animation; fade in animation is played automatically when a level is loaded
 		levelFadeAnimator.SetTrigger("FadeOut");
 		//delay for just long enough to fade to black
 		yield return new WaitForSeconds(0.5f);
 		//load new level; all other logic is handled in various OnAwake functions
-		SceneManager.LoadScene(newRoom);
-		Debug.Log("Starting new level");
+		SceneManager.LoadScene(newLevel);
+		Debug.Log("Starting " + newLevel);
 	}
 
 	private void UnlockDoor() {
@@ -91,6 +91,7 @@ public class LevelChanger : MonoBehaviour {
 
 	//called by the MenuButton on the PauseScreen
 	public void GoToMainMenu() {
-        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1; //reset time scale
+        StartCoroutine(StartNewLevelDelay("MainMenu"));
     }
 }
