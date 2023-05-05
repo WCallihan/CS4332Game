@@ -7,6 +7,8 @@ public class EnemyHealth : MonoBehaviour {
 
     [SerializeField] int maxHealth = 5;
     [SerializeField] GameObject enemyVisuals;
+    [SerializeField] Material defaultEnemyMat;
+    [SerializeField] Material hurtEnemyMat;
     [SerializeField] AudioClip hurtSound;
     private int currentHealth;
 
@@ -17,13 +19,12 @@ public class EnemyHealth : MonoBehaviour {
     void Awake() {
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
-        //_levelController = FindObjectOfType<Level01Controller>();
         currentHealth = maxHealth;
     }
 
     public void TakeDamage(int damage, string killedBy) {
         currentHealth -= damage; //damage the enemy
-        //StartCoroutine(RedFlash()); //flash the enemy red
+        StartCoroutine(HurtFlash()); //flash the enemy's eyes red in response to damage
         if(hurtSound) audioSource.PlayOneShot(hurtSound); //play hurt sound effect
         if(currentHealth <= 0) {
             Die(killedBy); //kill enemy
@@ -43,13 +44,11 @@ public class EnemyHealth : MonoBehaviour {
 		EnemyDied?.Invoke();
     }
 
-	/*
-    private IEnumerator RedFlash() {
-        Material enemyMaterial = enemyVisuals.GetComponent<Renderer>().material;
-        Color originalColor = enemyMaterial.color;
-        enemyMaterial.color = Color.red; //set the enemy color to red
+	
+    private IEnumerator HurtFlash() {
+        Renderer enemyRenderer = enemyVisuals.GetComponent<Renderer>();
+        enemyRenderer.material = hurtEnemyMat; //set the enemy material to the hurt version to set eyes to red
         yield return new WaitForSeconds(0.15f); //wait
-        enemyMaterial.color = originalColor; //set back to original color
+        enemyRenderer.material = defaultEnemyMat; //set back to original material
     }
-	*/
 }
