@@ -12,6 +12,7 @@ public class PlayerShooting : MonoBehaviour {
     [SerializeField] Transform rayOrigin;
     [SerializeField] float weaponRange = 50f;
     [SerializeField] float lineMaxDuration = 0.1f;
+    [SerializeField] ParticleSystem bulletHitSparks;
 
     [Header("Weapon Settings")]
     [SerializeField] int bulletDamage = 1;
@@ -85,8 +86,10 @@ public class PlayerShooting : MonoBehaviour {
         lineRenderer.SetPosition(0, rayOrigin.position); //sets begining of visual line
 
         //shoot raycast
-        if(Physics.Raycast(rayOrigin.position, rayDirection, out objectHit, weaponRange)) {
+        if(Physics.Raycast(playerCamera.transform.position, rayDirection, out objectHit, weaponRange)) {
             lineRenderer.SetPosition(1, objectHit.point); //sets end of visual line if it hits
+            var sparks = Instantiate(bulletHitSparks, objectHit.point, bulletHitSparks.transform.rotation); //spawn bullet sparks at hit location
+            sparks.transform.LookAt(transform.position); //make the bullet sparks look at the player
 
             //damage the enemy if one is hit
             EnemyHealth enemy = objectHit.transform.gameObject.GetComponent<EnemyHealth>();

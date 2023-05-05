@@ -100,7 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  enemyVisuals: {fileID: 5339788131418060458}
+  enemyVisuals: {fileID: 2248191133246957029}
+  defaultEnemyMat: {fileID: 2100000, guid: 2954963d08a0b044e8f84eece7126e53, type: 2}
+  hurtEnemyMat: {fileID: 2100000, guid: 37e2d64bc5ec6534899f66bc85c22e3f, type: 2}
   hurtSound: {fileID: 8300000, guid: 665f818d1ba08f948b14dd30caa394b1, type: 3}
 --- !u!114 &5339788131370727951
 MonoBehaviour:
@@ -489,10 +491,19 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 28723f10c2a8e094a9351e892f5271b8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2954963d08a0b044e8f84eece7126e53, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28723f10c2a8e094a9351e892f5271b8, type: 3}
 --- !u!4 &2248191133246667205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 28723f10c2a8e094a9351e892f5271b8, type: 3}
+  m_PrefabInstance: {fileID: 2248191133247054661}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2248191133246957029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 28723f10c2a8e094a9351e892f5271b8, type: 3}
   m_PrefabInstance: {fileID: 2248191133247054661}
   m_PrefabAsset: {fileID: 0}

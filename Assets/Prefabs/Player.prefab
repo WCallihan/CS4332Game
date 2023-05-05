@@ -871,6 +871,7 @@ MonoBehaviour:
   rayOrigin: {fileID: 3096262037572115757}
   weaponRange: 50
   lineMaxDuration: 0.1
+  bulletHitSparks: {fileID: 8811743104372464128, guid: 2c322ff60a3b8374e8bcd8f702d8ad22, type: 3}
   bulletDamage: 1
   shootBulletSound: {fileID: 8300000, guid: 67ae8da371822e148867842bcb9cbb3e, type: 3}
   rocketDamage: 3
