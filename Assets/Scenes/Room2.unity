@@ -288,6 +288,14 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3096262038924190599, guid: a4fe5a960b08e9847b7a635d405f5d22, type: 3}
+      propertyPath: playerVisuals.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096262038924190599, guid: a4fe5a960b08e9847b7a635d405f5d22, type: 3}
+      propertyPath: playerVisuals.Array.data[0]
+      value: 
+      objectReference: {fileID: 37703744}
     - target: {fileID: 3096262038924190601, guid: a4fe5a960b08e9847b7a635d405f5d22, type: 3}
       propertyPath: initRockets
       value: 2
@@ -318,6 +326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4fe5a960b08e9847b7a635d405f5d22, type: 3}
+--- !u!1 &37703744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3096262037840391082, guid: a4fe5a960b08e9847b7a635d405f5d22, type: 3}
+  m_PrefabInstance: {fileID: 37703743}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &49315603
 PrefabInstance:
   m_ObjectHideFlags: 0
