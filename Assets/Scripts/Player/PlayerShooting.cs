@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,24 +9,25 @@ using UnityEngine.UI;
 public class PlayerShooting : MonoBehaviour {
 
     [Header("Raycast Settings")]
-    [SerializeField] Camera playerCamera;
-    [SerializeField] Transform rayOrigin;
-    [SerializeField] float weaponRange = 50f;
-    [SerializeField] float lineMaxDuration = 0.1f;
-    [SerializeField] ParticleSystem bulletHitSparks;
+    [SerializeField] private Camera playerCamera;
+    [SerializeField] private Transform rayOrigin;
+    [SerializeField] private float weaponRange = 50f;
+    [SerializeField] private float lineMaxDuration = 0.1f;
+    [SerializeField] private ParticleSystem bulletHitSparks;
 
     [Header("Weapon Settings")]
-    [SerializeField] int bulletDamage = 1;
-    [SerializeField] AudioClip shootBulletSound;
+    [SerializeField] private int bulletDamage = 1;
+    [SerializeField] private AudioClip shootBulletSound;
     
-    [SerializeField] int rocketDamage = 3;
-    [SerializeField] float rocketForce = 1000f;
-    [SerializeField] float rocketExplosionRadius = 2f;
-    [SerializeField] GameObject rocketPrefab;
-    [SerializeField] Transform rocketSpawnPos;
-    [SerializeField] AudioClip shootRocketSound;
-    [SerializeField] GameObject rocketArt;
-    [SerializeField] int initRockets = 0;
+    [SerializeField] private int rocketDamage = 3;
+    [SerializeField] private float rocketForce = 1000f;
+    [SerializeField] private float rocketExplosionRadius = 2f;
+    [SerializeField] private GameObject rocketPrefab;
+    [SerializeField] private Transform rocketSpawnPos;
+    [SerializeField] private AudioClip shootRocketSound;
+    [SerializeField] private GameObject rocketArt;
+    [SerializeField] private int initRockets = 0;
+    [SerializeField] private TextMeshProUGUI rocketCountText;
 
     private RaycastHit objectHit;
     private LineRenderer lineRenderer;
@@ -103,6 +105,7 @@ public class PlayerShooting : MonoBehaviour {
 
     public void AddRocket() {
         numRockets++;
+        UpdateRocketCount();
         rocketArt.SetActive(true);
     }
 
@@ -123,6 +126,15 @@ public class PlayerShooting : MonoBehaviour {
 
         //remove a rocket
         numRockets--;
+        UpdateRocketCount();
         if(numRockets <= 0) rocketArt.SetActive(false);
+    }
+
+    private void UpdateRocketCount() {
+        if(numRockets < 10) {
+            rocketCountText.text = "0" + numRockets;
+        } else {
+            rocketCountText.text = "" + numRockets;
+        }
     }
 }
