@@ -12,7 +12,6 @@ public class Rocket : MonoBehaviour {
     private Rigidbody rocketRb;
     private AudioSource audioSource;
     private int damage;
-    private float force;
     private float radius;
     private Vector3 moveVector;
 
@@ -26,9 +25,8 @@ public class Rocket : MonoBehaviour {
         rocketRb.velocity = moveVector.normalized * Time.deltaTime * speed;
     }
 
-    public void SetRocket(int damage, float force, float radius, Vector3 move) {
+    public void SetRocket(int damage, float radius, Vector3 move) {
         this.damage = damage;
-        this.force = force;
         this.radius = radius;
         moveVector = move;
     }
@@ -40,7 +38,6 @@ public class Rocket : MonoBehaviour {
         foreach(Collider enemy in enemiesToDamage) {
             EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
             enemyHealth?.TakeDamage(damage); //apply damage to enemy
-            enemyHealth?.gameObject.GetComponent<Rigidbody>().AddExplosionForce(force, transform.position, radius, 0, ForceMode.Impulse); //apply force to enemy
         }
 		//spawn explosion particle effect
 		if(explosionPrefab) {

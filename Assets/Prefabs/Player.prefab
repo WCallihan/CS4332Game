@@ -1241,9 +1241,8 @@ MonoBehaviour:
   bulletHitSparks: {fileID: 8811743104372464128, guid: 2c322ff60a3b8374e8bcd8f702d8ad22, type: 3}
   bulletDamage: 1
   shootBulletSound: {fileID: 8300000, guid: 67ae8da371822e148867842bcb9cbb3e, type: 3}
-  rocketDamage: 3
-  rocketForce: 1000
-  rocketExplosionRadius: 2
+  rocketDamage: 5
+  rocketExplosionRadius: 4
   rocketPrefab: {fileID: 6408324188800375402, guid: 345352f0edd4956429260f08fc8e88bf, type: 3}
   rocketSpawnPos: {fileID: 6132335431254941397}
   shootRocketSound: {fileID: 8300000, guid: d86a3177e8b22e64abf21a2b3eb3be78, type: 3}

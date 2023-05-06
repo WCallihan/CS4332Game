@@ -20,7 +20,6 @@ public class PlayerShooting : MonoBehaviour {
     [SerializeField] private AudioClip shootBulletSound;
     
     [SerializeField] private int rocketDamage = 3;
-    [SerializeField] private float rocketForce = 1000f;
     [SerializeField] private float rocketExplosionRadius = 2f;
     [SerializeField] private GameObject rocketPrefab;
     [SerializeField] private Transform rocketSpawnPos;
@@ -120,7 +119,7 @@ public class PlayerShooting : MonoBehaviour {
         //spawn the rocket prefab
         GameObject rocket = Instantiate(rocketPrefab, rocketSpawnPos.position, Quaternion.LookRotation(rocketDirection));
         //assign rocket values based on player settings
-        rocket.GetComponent<Rocket>().SetRocket(rocketDamage, rocketForce, rocketExplosionRadius, rocketDirection);
+        rocket.GetComponent<Rocket>().SetRocket(rocketDamage, rocketExplosionRadius, rocketDirection);
         //play shooting sound effect
         if(shootRocketSound) audioSource.PlayOneShot(shootRocketSound);
 
