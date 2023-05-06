@@ -25,34 +25,10 @@ public class PlayerMovement : MonoBehaviour {
     private bool hasDoubleJumped = false;
     private bool wasSprintingWhenJumped = false;
 
-	//singleton instance variables
-	private static PlayerMovement instance;
-	public static PlayerMovement Instance { get { return instance; } }
-
-    private void OnEnable() {
-        LevelChanger.MenuStarted += DestroyPlayer;
-    }
-
-    private void OnDisable() {
-        LevelChanger.MenuStarted -= DestroyPlayer;
-    }
-
     void Awake() {
         characterController = GetComponent<CharacterController>();
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
-
-		//singleton logic
-		DontDestroyOnLoad(gameObject);
-		if(instance != null && instance != this) {
-			//move the already exsisting player to this player's spot; used when starting a new level
-			Instance.gameObject.transform.position = gameObject.transform.position;
-			Instance.gameObject.transform.rotation = gameObject.transform.rotation;
-			//destroy this player
-			Destroy(gameObject);
-		} else {
-			instance = this;
-		}
 	}
 
     void Update() {
@@ -100,10 +76,5 @@ public class PlayerMovement : MonoBehaviour {
         //simulate gravity
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
-    }
-
-    //destroys the player game object; used when the main menu is launched
-    private void DestroyPlayer() {
-        Destroy(gameObject);
     }
 }

@@ -70,7 +70,7 @@ public class LevelChanger : MonoBehaviour {
 		} while(newRoom == currentRoom);
 
         //TODO: update player score if not coming from the menu
-        if (currentRoom != "MainMenu") { PlayerScore.instance.AddPoint(); }
+        if (currentRoom != "MainMenu") { PlayerScore.Instance.AddPoint(); }
         Debug.Log("Added a point");
 
 		StartCoroutine(StartNewLevelDelay(newRoom));
