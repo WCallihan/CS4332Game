@@ -5,14 +5,21 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour {
 
-    [SerializeField] int maxHealth = 5;
-    [SerializeField] GameObject enemyVisuals;
-    [SerializeField] Material defaultEnemyMat;
-    [SerializeField] Material hurtEnemyMat;
-    [SerializeField] AudioClip hurtSound;
-    private int currentHealth;
+    [Header("Health")]
+    [SerializeField] private int maxHealth = 5;
+
+    [Header("Hurt Settings")]
+    [SerializeField] private GameObject enemyVisuals;
+    [SerializeField] private Material defaultEnemyMat;
+    [SerializeField] private Material hurtEnemyMat;
+    [SerializeField] private AudioClip hurtSound;
+
+    [Header("Loot Spawning")]
+    [SerializeField] private GameObject rocketPickupPrefab;
+    [SerializeField, Range(0, 1)] private float spawnChance;
 
     private AudioSource audioSource;
+    private int currentHealth;
 
 	public event Action EnemyDied;
 
@@ -22,26 +29,23 @@ public class EnemyHealth : MonoBehaviour {
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int damage, string killedBy) {
+    public void TakeDamage(int damage) {
         currentHealth -= damage; //damage the enemy
         StartCoroutine(HurtFlash()); //flash the enemy's eyes red in response to damage
         if(hurtSound) audioSource.PlayOneShot(hurtSound); //play hurt sound effect
         if(currentHealth <= 0) {
-            Die(killedBy); //kill enemy
+            Die(); //kill enemy
         }
     }
 
-    private void Die(string killedBy) {
-        //increase the score based on what it was killed by
-        if(killedBy.Equals("bullet") || killedBy.Equals("hazard")) {
-        } else if(killedBy.Equals("rocket")) {
-        } else {
-            Debug.Log("Bad killedBy variable: " + killedBy);
-        }
+    private void Die() {
+        //try to spawn rocket pickup
+        float rand = UnityEngine.Random.Range(0f, 1f);
+        if(rand <= spawnChance) Instantiate(rocketPickupPrefab, new Vector3(transform.position.x, 0, transform.position.z), transform.rotation);
+
         gameObject.SetActive(false); //deactivate game object
 		EnemyDied?.Invoke();
     }
-
 	
     private IEnumerator HurtFlash() {
         Renderer enemyRenderer = enemyVisuals.GetComponent<Renderer>();

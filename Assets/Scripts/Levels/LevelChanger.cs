@@ -39,18 +39,12 @@ public class LevelChanger : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
 		PlayerPickups player = other.GetComponent<PlayerPickups>();
-
-		if(player != null) {
-			player.EnterDoorTrigger(this, doorUnlocked);
-        }
+		if(player != null) player.EnterDoorTrigger(this, doorUnlocked);
     }
 
 	private void OnTriggerExit(Collider other) {
 		PlayerPickups player = other.GetComponent<PlayerPickups>();
-
-		if(player != null) {
-			player.ExitDoorTrigger();
-		}
+		if(player != null) player.ExitDoorTrigger();
 	}
 
 	//called by the PlayButton on the MainMenu and by interacting with ending doors in all room levels
