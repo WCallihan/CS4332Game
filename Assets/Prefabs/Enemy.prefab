@@ -124,6 +124,8 @@ MonoBehaviour:
   defaultEnemyMat: {fileID: 2100000, guid: 2954963d08a0b044e8f84eece7126e53, type: 2}
   hurtEnemyMat: {fileID: 2100000, guid: 37e2d64bc5ec6534899f66bc85c22e3f, type: 2}
   hurtSound: {fileID: 8300000, guid: 665f818d1ba08f948b14dd30caa394b1, type: 3}
+  rocketPickupPrefab: {fileID: 5403857241238063584, guid: 958fcf265820ac74597162b8e94e20ee, type: 3}
+  spawnChance: 0.33
 --- !u!114 &5339788131370727951
 MonoBehaviour:
   m_ObjectHideFlags: 0

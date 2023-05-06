@@ -93,7 +93,7 @@ public class PlayerShooting : MonoBehaviour {
 
             //damage the enemy if one is hit
             EnemyHealth enemy = objectHit.transform.gameObject.GetComponent<EnemyHealth>();
-            enemy?.TakeDamage(bulletDamage, "bullet");
+            enemy?.TakeDamage(bulletDamage);
         } else {
             lineRenderer.SetPosition(1, endPosition); //sets end of visual line if it misses
         }
