@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.75
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.25
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: b64a9cc15263ba94daf9055d6399b068, type: 2}
 --- !u!1 &58838
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -263,6 +267,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -339,6 +351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -383,6 +399,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
 --- !u!4 &138099632 stripped
@@ -400,6 +424,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -577,6 +613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -620,6 +660,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -741,9 +789,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3007915125101278950, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007915125101278950, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007915125285856092, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007915125285856092, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007915126041143317, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007915126041143317, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3382536273150263606, guid: ae12952184228634db5d49271b465c40, type: 3}
       propertyPath: m_Name
       value: ModernDeskRandom (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3382536273150263606, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae12952184228634db5d49271b465c40, type: 3}
@@ -762,6 +838,10 @@ PrefabInstance:
     - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_Name
       value: ModernServer1Random (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
@@ -806,6 +886,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -949,6 +1037,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1054,6 +1154,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!4 &265282358 stripped
@@ -1138,6 +1246,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -1339,6 +1459,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1396,6 +1528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -1439,6 +1575,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -1645,6 +1789,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!1001 &476615527
@@ -1728,6 +1880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -1772,6 +1928,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
 --- !u!4 &494708246 stripped
@@ -1789,6 +1953,10 @@ PrefabInstance:
     - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_Name
       value: ModernServer1Random (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
@@ -1834,6 +2002,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
 --- !u!4 &546112633 stripped
@@ -1866,6 +2042,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -1928,6 +2116,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -2030,6 +2230,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!1001 &634051877
@@ -2042,6 +2250,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -2204,6 +2424,14 @@ PrefabInstance:
     - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
       propertyPath: m_Name
       value: WallTile (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
@@ -2399,6 +2627,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -2442,6 +2674,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -2508,6 +2748,14 @@ PrefabInstance:
     - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
       propertyPath: m_Name
       value: WallTile (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
@@ -2675,6 +2923,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!1001 &831569082
@@ -2687,6 +2943,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -2775,6 +3043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 39
@@ -2819,6 +3091,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
 --- !u!4 &967194922 stripped
@@ -2836,6 +3116,10 @@ PrefabInstance:
     - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_Name
       value: ModernServer1Random (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
@@ -2880,6 +3164,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -2960,6 +3252,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -3227,6 +3531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -3271,6 +3579,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
 --- !u!4 &1115849263 stripped
@@ -3288,6 +3604,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -3451,6 +3779,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!1001 &1202998113
@@ -3463,6 +3799,10 @@ PrefabInstance:
     - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_Name
       value: ModernServer1Random (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
@@ -3507,6 +3847,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -3572,7 +3920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4828956286890773521, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 14.018606
+      value: 10.513814
       objectReference: {fileID: 0}
     - target: {fileID: 4828956286890773521, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
       propertyPath: m_LocalScale.y
@@ -3626,6 +3974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorTile
       objectReference: {fileID: 0}
+    - target: {fileID: 5208472913622324907, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
 --- !u!4 &1275015891 stripped
@@ -3643,6 +3995,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -3800,6 +4164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -3844,6 +4212,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
 --- !u!4 &1330859220 stripped
@@ -3866,6 +4242,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -3923,6 +4311,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -4083,9 +4483,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3007915125101278950, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007915125101278950, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007915125285856092, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007915125285856092, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007915126041143317, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007915126041143317, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3382536273150263606, guid: ae12952184228634db5d49271b465c40, type: 3}
       propertyPath: m_Name
       value: ModernDeskRandom
+      objectReference: {fileID: 0}
+    - target: {fileID: 3382536273150263606, guid: ae12952184228634db5d49271b465c40, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae12952184228634db5d49271b465c40, type: 3}
@@ -4104,6 +4532,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -4348,6 +4788,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4482,6 +4934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -4525,6 +4981,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -4734,6 +5198,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -5000,6 +5476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -5044,6 +5524,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
 --- !u!4 &1760785389 stripped
@@ -5066,6 +5554,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -5124,6 +5624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -5167,6 +5671,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -5300,6 +5812,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -5357,6 +5881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -5400,6 +5928,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -5480,6 +6016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -5523,6 +6063,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -5614,6 +6162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -5658,6 +6210,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
 --- !u!4 &1913465194 stripped
@@ -5680,6 +6240,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -5743,6 +6315,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -5786,6 +6362,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -5882,6 +6466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -5925,6 +6513,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -6006,6 +6602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -6050,6 +6650,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728114581123578587, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
 --- !u!4 &2059678289 stripped
@@ -6072,6 +6684,18 @@ PrefabInstance:
     - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_Name
       value: ModernServer2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532426497470981235, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2166114234068844233, guid: 7824f032bf516c34ab82e3977f3940c8, type: 3}
       propertyPath: m_RootOrder
@@ -6130,6 +6754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModernServer1Random (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 880665184016710987, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -6173,6 +6801,14 @@ PrefabInstance:
     - target: {fileID: 2265113258254029778, guid: eab0df4c51b65e6468253c4080108177, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536474889308138283, guid: eab0df4c51b65e6468253c4080108177, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab0df4c51b65e6468253c4080108177, type: 3}
@@ -6239,6 +6875,14 @@ PrefabInstance:
     - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
       propertyPath: m_Name
       value: WallTile (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
