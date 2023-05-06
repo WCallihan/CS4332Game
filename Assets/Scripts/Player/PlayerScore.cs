@@ -8,7 +8,8 @@ public class PlayerScore : MonoBehaviour {
 
     [SerializeField] private TextMeshProUGUI scoreText;
 
-    private int score = 0;
+    private int score;
+    public int Score => score; //public getter
 
     //singleton instance variables
     private static PlayerScore instance;
@@ -24,6 +25,8 @@ public class PlayerScore : MonoBehaviour {
 
 
     private void Awake() {
+        score = 0;
+
         //singleton logic
         DontDestroyOnLoad(gameObject);
         if(instance != null && instance != this) {

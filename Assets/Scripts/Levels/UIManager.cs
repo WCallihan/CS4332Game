@@ -1,12 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
+    [Header("Pause Screen")]
     [SerializeField] private GameObject pauseScreen;
+
+    [Header("Death Screen")]
 	[SerializeField] private GameObject deathScreen;
+    [SerializeField] private TextMeshProUGUI previousBestText;
+    [SerializeField] private TextMeshProUGUI currentScoreText;
 
     private bool paused;
 
@@ -67,6 +73,21 @@ public class UIManager : MonoBehaviour {
     }
 
 	private void ShowDeath() {
+        //set high score text
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        previousBestText.text = "Previous Best: " + highScore;
+        //see if the current score is a high score and display appropriately
+        int currentScore = FindObjectOfType<PlayerScore>().Score;
+        currentScoreText.text = "Rooms Cleared: " + currentScore;
+        if(currentScore > highScore) {
+            //new high score
+            currentScoreText.color = Color.green;
+            PlayerPrefs.SetInt("HighScore", currentScore);
+        } else {
+            //not a new high score
+            currentScoreText.color = Color.white;
+        }
+
 		//freeze time
 		Time.timeScale = 0;
 		//show the death screen
