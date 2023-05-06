@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.75
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.25
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 782cf04a5e7278948864c8ef80a906aa, type: 2}
 --- !u!1001 &4846668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -465,6 +465,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!1001 &75777319
@@ -474,6 +482,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (11)
@@ -583,6 +599,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!1001 &85491063
@@ -657,6 +681,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (3)
@@ -821,6 +853,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (13)
@@ -940,6 +980,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (15)
@@ -1002,6 +1050,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (10)
@@ -1245,6 +1301,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (6)
@@ -1354,6 +1418,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!1001 &305477664
@@ -1420,6 +1492,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2710614490280132741, guid: aa6125758b4276146b223e53871ce465, type: 3}
       propertyPath: m_Name
       value: VintageRecUnitRandom
@@ -1716,6 +1804,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (17)
@@ -1959,6 +2055,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (12)
@@ -2026,6 +2130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (1)
@@ -2145,6 +2257,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (9)
@@ -2207,6 +2327,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (18)
@@ -2269,6 +2397,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (16)
@@ -2445,6 +2581,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2710614490280132741, guid: aa6125758b4276146b223e53871ce465, type: 3}
       propertyPath: m_Name
       value: VintageRecUnitRandom (4)
@@ -2789,6 +2941,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2710614490280132741, guid: aa6125758b4276146b223e53871ce465, type: 3}
       propertyPath: m_Name
       value: VintageRecUnitRandom (1)
@@ -2903,6 +3071,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2710614490280132741, guid: aa6125758b4276146b223e53871ce465, type: 3}
       propertyPath: m_Name
       value: VintageRecUnitRandom (3)
@@ -3161,6 +3345,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!4 &1049360093 stripped
@@ -3190,6 +3382,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2710614490280132741, guid: aa6125758b4276146b223e53871ce465, type: 3}
       propertyPath: m_Name
       value: VintageRecUnitRandom (12)
@@ -3475,6 +3683,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!4 &1203897988 stripped
@@ -3573,6 +3789,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom
@@ -4119,6 +4343,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (14)
@@ -4231,6 +4463,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2710614490280132741, guid: aa6125758b4276146b223e53871ce465, type: 3}
       propertyPath: m_Name
       value: VintageRecUnitRandom (10)
@@ -4288,6 +4536,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (7)
@@ -4345,6 +4601,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (4)
@@ -4521,6 +4785,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2710614490280132741, guid: aa6125758b4276146b223e53871ce465, type: 3}
       propertyPath: m_Name
       value: VintageRecUnitRandom (11)
@@ -4584,19 +4864,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4828956286890773521, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 13.824901
+      value: 11.297713
       objectReference: {fileID: 0}
     - target: {fileID: 4828956286890773521, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10.7251215
+      value: 8.839435
       objectReference: {fileID: 0}
     - target: {fileID: 4828956286890773521, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.7
+      value: 14.4
       objectReference: {fileID: 0}
     - target: {fileID: 4828956286890773521, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.9
+      value: 12.6
       objectReference: {fileID: 0}
     - target: {fileID: 4828956286890773521, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4629,6 +4909,10 @@ PrefabInstance:
     - target: {fileID: 5208472913622324907, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
       propertyPath: m_Name
       value: FloorTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208472913622324907, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a582638074092f44a1ff367a7367df0, type: 3}
@@ -4924,6 +5208,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!1001 &1688922855
@@ -5062,6 +5354,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!1001 &1768114577
@@ -5133,6 +5433,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (2)
@@ -5339,6 +5647,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!4 &1968032748 stripped
@@ -5363,6 +5679,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (8)
@@ -5420,6 +5744,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415106833575981464, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4531542987866679936, guid: c3146ef4af06b094bbeccee47d4a6826, type: 3}
       propertyPath: m_Name
       value: VintageControlTableRandom (5)
@@ -5529,6 +5861,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTile (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459847440771419665, guid: a5b956f498c18d841bf6348202be1499, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b956f498c18d841bf6348202be1499, type: 3}
 --- !u!1001 &2121321860
@@ -5538,6 +5878,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1243915991}
     m_Modifications:
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539580019839266, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524539581086115714, guid: aa6125758b4276146b223e53871ce465, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2710614490280132741, guid: aa6125758b4276146b223e53871ce465, type: 3}
       propertyPath: m_Name
       value: VintageRecUnitRandom (2)
