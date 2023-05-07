@@ -139,12 +139,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponRange: 25
-  leftRayOrigin: {fileID: 5339788132419304398}
-  rightRayOrigin: {fileID: 1952912679384612142}
+  rayOrigins:
+  - {fileID: 5339788132419304398}
+  - {fileID: 1952912679384612142}
   lineMaxDuration: 0.1
   attackCooldown: 1
   weaponDamage: 2
-  weaponAccuracy: 80
+  weaponAccuracy: 85
   shootingSound: {fileID: 8300000, guid: e13df305808c2a348baef228cdc3bee6, type: 3}
 --- !u!135 &7151776504917662643
 SphereCollider:

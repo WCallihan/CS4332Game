@@ -6,8 +6,7 @@ public class EnemyShooting : MonoBehaviour {
 
     [Header("Raycast Settings")]
     [SerializeField] float weaponRange = 50f;
-    [SerializeField] Transform leftRayOrigin;
-    [SerializeField] Transform rightRayOrigin;
+    [SerializeField] Transform[] rayOrigins;
     [SerializeField] float lineMaxDuration = 0.1f;
 
     [Header("Weapons Settings")]
@@ -31,7 +30,7 @@ public class EnemyShooting : MonoBehaviour {
         audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
         Mathf.Clamp(weaponAccuracy, 0f, 100f); //clamps accuracy between 0% and 100%
         playerSighted = false;
-		currentRayOrigin = leftRayOrigin;
+		currentRayOrigin = rayOrigins[0];
     }
 
     void Update() {
@@ -90,11 +89,12 @@ public class EnemyShooting : MonoBehaviour {
         //play the shooting sound effect
         if(shootingSound) audioSource.PlayOneShot(shootingSound);
 
-		//switch the current ray origin
-		if(currentRayOrigin == leftRayOrigin) {
-			currentRayOrigin = rightRayOrigin;
-		} else {
-			currentRayOrigin = leftRayOrigin;
-		}
+        //switch the current ray origin to a random new one that's different
+        //this is mostly just for the boss enemy since the regular ones only have 2
+        Transform newOrigin;
+        do {
+            newOrigin = rayOrigins[Random.Range(0, rayOrigins.Length)];
+        } while(newOrigin == currentRayOrigin);
+        currentRayOrigin = newOrigin;
 	}
 }

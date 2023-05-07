@@ -13,6 +13,10 @@ public class EnemyWaveSpawner : MonoBehaviour {
     [SerializeField] private int minEnemies;
     [SerializeField] private int maxEnemies;
 
+    [Header("Boss Wave")]
+    [SerializeField] private GameObject bossPrefab;
+    [SerializeField] private int bossRoundFrequency; //a boss will spawn every x rooms
+
     [Header("Spawning Bounds")]
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
@@ -20,6 +24,7 @@ public class EnemyWaveSpawner : MonoBehaviour {
     [SerializeField] private float maxZ;
 
     private AudioSource audioSource;
+    private PlayerScore player;
 	private int currentWave;
 	private int totalWaveEnemies;
 	private int waveEnemiesKilled;
@@ -28,10 +33,11 @@ public class EnemyWaveSpawner : MonoBehaviour {
 
 	private void Awake() {
         audioSource = GetComponent<AudioSource>();
+        player = FindObjectOfType<PlayerScore>();
         audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
 		currentWave = 0;
 		waveEnemiesKilled = 0;
-		StartCoroutine(SpawnWaveDelay());
+		StartCoroutine(SpawnWaveDelay(isBossRoom: false));
 	}
 
 	private void SpawnNewWave() {
@@ -40,30 +46,47 @@ public class EnemyWaveSpawner : MonoBehaviour {
         waveEnemiesKilled = 0;
 
         for(int i=0; i<totalWaveEnemies; i++) {
-            //find a random spawn position on the nav mesh
-            Vector3 spawnPos = Vector3.zero;
-            do {
-                float randX = UnityEngine.Random.Range(minX, maxX);
-                float randZ = UnityEngine.Random.Range(minZ, maxZ);
-                NavMeshHit hit;
-                if(NavMesh.SamplePosition(new(randX, 0, randZ), out hit, 1, NavMesh.AllAreas)) {
-                    spawnPos = hit.position;
-                }
-            } while(spawnPos == Vector3.zero);
-            StartCoroutine(SpawnEnemy(spawnPos + new Vector3(0, 2, 0)));
+            Vector3 spawnPos = GetMeshPoint() + new Vector3(0, 2, 0);
+            StartCoroutine(SpawnEnemy(enemyPrefab, spawnPos));
         }
         if(enemySpawnSound) audioSource.PlayOneShot(enemySpawnSound);
         Debug.Log("Spawning " + totalWaveEnemies + " Enemies");
 	}
 
-    private IEnumerator SpawnEnemy(Vector3 spawnPos) {
+    private void SpawnBoss() {
+        currentWave++;
+        totalWaveEnemies = 1;
+        waveEnemiesKilled = 0;
+
+        Vector3 spawnPos = GetMeshPoint() + new Vector3(0, 2.5f, 0);
+        StartCoroutine(SpawnEnemy(bossPrefab, spawnPos));
+        if(enemySpawnSound) audioSource.PlayOneShot(enemySpawnSound);
+        Debug.Log("Spawning Boss");
+    }
+
+    //helper function to get the closest point on the nav mesh to spawn the enemy
+    private Vector3 GetMeshPoint() {
+        //find a random spawn position on the nav mesh
+        Vector3 spawnPos = Vector3.zero;
+        do {
+            float randX = UnityEngine.Random.Range(minX, maxX);
+            float randZ = UnityEngine.Random.Range(minZ, maxZ);
+            NavMeshHit hit;
+            if(NavMesh.SamplePosition(new(randX, 0, randZ), out hit, 1, NavMesh.AllAreas)) {
+                spawnPos = hit.position;
+            }
+        } while(spawnPos == Vector3.zero);
+        return spawnPos;
+    }
+
+    private IEnumerator SpawnEnemy(GameObject enemy, Vector3 spawnPos) {
         //spawn the particle system where the enemy will spawn
         if(enemySpawnParticles) Instantiate(enemySpawnParticles, spawnPos, enemySpawnParticles.transform.rotation);
         //wait a fourth the length of the particles
         yield return new WaitForSeconds(enemySpawnParticles.main.startLifetime.constant / 4f);
         //spawn the enemy and subscribe the function to its death event
-        var enemy = Instantiate(enemyPrefab, spawnPos, enemyPrefab.transform.rotation);
-        enemy.GetComponent<EnemyHealth>().EnemyDied += OnEnemyDeath;
+        var spawnedEnemy = Instantiate(enemy, spawnPos, enemyPrefab.transform.rotation);
+        spawnedEnemy.GetComponent<EnemyHealth>().EnemyDied += OnEnemyDeath;
     }
 
 	private void OnEnemyDeath() {
@@ -73,7 +96,13 @@ public class EnemyWaveSpawner : MonoBehaviour {
 		if(waveEnemiesKilled >= totalWaveEnemies) {
 			//since the wave is over, spawn the next one if there is one
 			if(currentWave == 1) {
-				StartCoroutine(SpawnWaveDelay());
+                if((player.Score + 1) % bossRoundFrequency == 0) {
+                    //boss round is up, spawn a boss
+                    StartCoroutine(SpawnWaveDelay(isBossRoom: true));
+                } else {
+                    //no boss, spawn a normal wave
+                    StartCoroutine(SpawnWaveDelay(isBossRoom : false));
+                }
 			} else if(currentWave == 2) {
 				AllEnemiesDead?.Invoke();
 			} else {
@@ -83,9 +112,13 @@ public class EnemyWaveSpawner : MonoBehaviour {
 	}
 
 	//adds small delay between enemy waves
-	private IEnumerator SpawnWaveDelay() {
+	private IEnumerator SpawnWaveDelay(Boolean isBossRoom) {
 		yield return new WaitForSeconds(2);
-		SpawnNewWave();
+        if(isBossRoom) {
+            SpawnBoss();
+        } else {
+            SpawnNewWave();
+        }
 	}
 
     //draw a rectangle around the set spawning bounds

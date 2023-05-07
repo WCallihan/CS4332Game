@@ -50,6 +50,8 @@ MonoBehaviour:
   enemySpawnSound: {fileID: 8300000, guid: 6894cd87ae6d89d498cf15031552c5e9, type: 3}
   minEnemies: 3
   maxEnemies: 4
+  bossPrefab: {fileID: 4341522056943517109, guid: 3ec87a2e905934e4289689dbba82b1c4, type: 3}
+  bossRoundFrequency: 5
   minX: 0
   maxX: 0
   minZ: 0
