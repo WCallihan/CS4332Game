@@ -8,6 +8,8 @@ public class EnemyWaveSpawner : MonoBehaviour {
 
     [Header("Enemy Waves")]
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private ParticleSystem enemySpawnParticles;
+    [SerializeField] private AudioClip enemySpawnSound;
     [SerializeField] private int minEnemies;
     [SerializeField] private int maxEnemies;
 
@@ -17,6 +19,7 @@ public class EnemyWaveSpawner : MonoBehaviour {
     [SerializeField] private float minZ;
     [SerializeField] private float maxZ;
 
+    private AudioSource audioSource;
 	private int currentWave;
 	private int totalWaveEnemies;
 	private int waveEnemiesKilled;
@@ -24,6 +27,8 @@ public class EnemyWaveSpawner : MonoBehaviour {
 	public event Action AllEnemiesDead;
 
 	private void Awake() {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
 		currentWave = 0;
 		waveEnemiesKilled = 0;
 		StartCoroutine(SpawnWaveDelay());
@@ -45,12 +50,21 @@ public class EnemyWaveSpawner : MonoBehaviour {
                     spawnPos = hit.position;
                 }
             } while(spawnPos == Vector3.zero);
-            //spawn the enemy and subscribe the function to its death event
-            var enemy = Instantiate(enemyPrefab, spawnPos + new Vector3(0f, 2f, 0f), enemyPrefab.transform.rotation);
-            enemy.GetComponent<EnemyHealth>().EnemyDied += OnEnemyDeath;
+            StartCoroutine(SpawnEnemy(spawnPos + new Vector3(0, 2, 0)));
         }
+        if(enemySpawnSound) audioSource.PlayOneShot(enemySpawnSound);
         Debug.Log("Spawning " + totalWaveEnemies + " Enemies");
 	}
+
+    private IEnumerator SpawnEnemy(Vector3 spawnPos) {
+        //spawn the particle system where the enemy will spawn
+        if(enemySpawnParticles) Instantiate(enemySpawnParticles, spawnPos, enemySpawnParticles.transform.rotation);
+        //wait a fourth the length of the particles
+        yield return new WaitForSeconds(enemySpawnParticles.main.startLifetime.constant / 4f);
+        //spawn the enemy and subscribe the function to its death event
+        var enemy = Instantiate(enemyPrefab, spawnPos, enemyPrefab.transform.rotation);
+        enemy.GetComponent<EnemyHealth>().EnemyDied += OnEnemyDeath;
+    }
 
 	private void OnEnemyDeath() {
 		waveEnemiesKilled++;
