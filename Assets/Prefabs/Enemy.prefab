@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02136fb33cb4f3848afe4832319325cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turnDampening: 5
 --- !u!195 &1874493967567408408
 NavMeshAgent:
   m_ObjectHideFlags: 0
