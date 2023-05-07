@@ -250,6 +250,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 926012839462081132, guid: 61584c8d645fd3f4fa5b24ed624444f9, type: 3}
+      propertyPath: maxX
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 926012839462081132, guid: 61584c8d645fd3f4fa5b24ed624444f9, type: 3}
+      propertyPath: maxZ
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 926012839462081132, guid: 61584c8d645fd3f4fa5b24ed624444f9, type: 3}
+      propertyPath: minX
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 926012839462081132, guid: 61584c8d645fd3f4fa5b24ed624444f9, type: 3}
+      propertyPath: minZ
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 926012839462081132, guid: 61584c8d645fd3f4fa5b24ed624444f9, type: 3}
       propertyPath: enemyWave1.Array.size
       value: 3
       objectReference: {fileID: 0}
