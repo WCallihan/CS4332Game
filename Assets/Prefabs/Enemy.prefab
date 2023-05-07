@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02136fb33cb4f3848afe4832319325cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turnDampening: 5
 --- !u!195 &1874493967567408408
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -139,12 +140,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponRange: 25
-  leftRayOrigin: {fileID: 5339788132419304398}
-  rightRayOrigin: {fileID: 1952912679384612142}
+  rayOrigins:
+  - {fileID: 5339788132419304398}
+  - {fileID: 1952912679384612142}
   lineMaxDuration: 0.1
   attackCooldown: 1
   weaponDamage: 2
-  weaponAccuracy: 80
+  weaponAccuracy: 85
   shootingSound: {fileID: 8300000, guid: e13df305808c2a348baef228cdc3bee6, type: 3}
 --- !u!135 &7151776504917662643
 SphereCollider:

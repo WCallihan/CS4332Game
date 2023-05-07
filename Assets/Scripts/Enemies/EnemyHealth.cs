@@ -31,7 +31,7 @@ public class EnemyHealth : MonoBehaviour {
 
     public void TakeDamage(int damage) {
         currentHealth -= damage; //damage the enemy
-        StartCoroutine(HurtFlash()); //flash the enemy's eyes red in response to damage
+        if(defaultEnemyMat && hurtEnemyMat) StartCoroutine(HurtFlash()); //flash the enemy's eyes red in response to damage
         if(hurtSound) audioSource.PlayOneShot(hurtSound); //play hurt sound effect
         if(currentHealth <= 0) {
             Die(); //kill enemy
