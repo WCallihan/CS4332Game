@@ -1161,7 +1161,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  gravity: -9.81
+  gravity: -30
   jumpHeight: 3
   jumpSound: {fileID: 8300000, guid: 579155170c98cce43b36f287a425459d, type: 3}
 --- !u!114 &3096262038924190599
@@ -1240,8 +1240,10 @@ MonoBehaviour:
   lineMaxDuration: 0.1
   bulletHitSparks: {fileID: 8811743104372464128, guid: 2c322ff60a3b8374e8bcd8f702d8ad22, type: 3}
   bulletDamage: 1
+  bulletCooldown: 0.5
   shootBulletSound: {fileID: 8300000, guid: 67ae8da371822e148867842bcb9cbb3e, type: 3}
   rocketDamage: 5
+  rocketCooldown: 1
   rocketExplosionRadius: 4
   rocketPrefab: {fileID: 6408324188800375402, guid: 345352f0edd4956429260f08fc8e88bf, type: 3}
   rocketSpawnPos: {fileID: 6132335431254941397}

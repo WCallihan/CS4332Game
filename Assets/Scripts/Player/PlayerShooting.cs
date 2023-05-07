@@ -11,16 +11,19 @@ public class PlayerShooting : MonoBehaviour {
     [Header("Raycast Settings")]
     [SerializeField] private Camera playerCamera;
     [SerializeField] private Transform rayOrigin;
-    [SerializeField] private float weaponRange = 50f;
-    [SerializeField] private float lineMaxDuration = 0.1f;
+    [SerializeField] private float weaponRange;
+    [SerializeField] private float lineMaxDuration;
     [SerializeField] private ParticleSystem bulletHitSparks;
 
-    [Header("Weapon Settings")]
-    [SerializeField] private int bulletDamage = 1;
+    [Header("Primary Fire")]
+    [SerializeField] private int bulletDamage;
+    [SerializeField] private float bulletCooldown;
     [SerializeField] private AudioClip shootBulletSound;
     
-    [SerializeField] private int rocketDamage = 3;
-    [SerializeField] private float rocketExplosionRadius = 2f;
+    [Header("Secondary Fire")]
+    [SerializeField] private int rocketDamage;
+    [SerializeField] private float rocketCooldown;
+    [SerializeField] private float rocketExplosionRadius;
     [SerializeField] private GameObject rocketPrefab;
     [SerializeField] private Transform rocketSpawnPos;
     [SerializeField] private AudioClip shootRocketSound;
@@ -31,7 +34,9 @@ public class PlayerShooting : MonoBehaviour {
     private RaycastHit objectHit;
     private LineRenderer lineRenderer;
     private AudioSource audioSource;
-    private float lineTimer = 0f;
+    private float lineTimestamp; //acts as the cooldown counter for the line renderer
+    private float bulletTimestamp; //acts as the cooldown counter for primary fire
+    private float rocketTimestamp; //acts as the cooldown counter for secondary fire
     private bool canShoot;
     private int numRockets;
 
@@ -58,18 +63,16 @@ public class PlayerShooting : MonoBehaviour {
         lineRenderer.enabled = true;
 
         //on left click, fire a bullet when the game is running
-        if(Input.GetKeyDown(KeyCode.Mouse0) && canShoot) {
-            lineTimer = lineMaxDuration; //reset line timer whenever a bullet it fired
+        if(Input.GetKeyDown(KeyCode.Mouse0) && canShoot && Time.time >= bulletTimestamp) {
             FireBullet();
         }
         //on right click, fire a rocket if you have any
-        if(Input.GetKeyDown(KeyCode.Mouse1) && numRockets > 0) {
+        if(Input.GetKeyDown(KeyCode.Mouse1) && numRockets > 0 && Time.time >= rocketTimestamp) {
             FireRocket();
         }
 
         //disable line renderer after max duration to make line disappear
-        lineTimer -= Time.deltaTime;
-        if(lineTimer <= 0) {
+        if(Time.time >= lineTimestamp) {
             lineRenderer.enabled = false;
         }
     }
@@ -80,10 +83,14 @@ public class PlayerShooting : MonoBehaviour {
     }
 
     private void FireBullet() {
+        //set primary fire cooldown
+        bulletTimestamp = Time.time + bulletCooldown;
+
         //calculate direction and probable end point of the bullet
         Vector3 rayDirection = playerCamera.transform.forward; //bullet raycast goes in the direction the camera is facing
         Vector3 endPosition = rayOrigin.position + (rayDirection * weaponRange); //calculated end point of the raycast
 
+        lineTimestamp = Time.time + lineMaxDuration; //reset line timer
         lineRenderer.SetPosition(0, rayOrigin.position); //sets begining of visual line
 
         //shoot raycast
@@ -104,13 +111,16 @@ public class PlayerShooting : MonoBehaviour {
 
     public void AddRocket() {
         numRockets++;
-        UpdateRocketCount();
+        UpdateRocketCountText();
         rocketArt.SetActive(true);
     }
 
     //old function that was used to fire a rocket that went straight
     private void FireRocket() {
 		if(rocketPrefab == null) return;
+
+        //set secondary fire cooldown
+        rocketTimestamp = Time.time + rocketCooldown;
 
         //calculate direction of the rocket
         Vector3 rocketDirection = playerCamera.transform.forward; //same as bullet raycast direction
@@ -125,11 +135,11 @@ public class PlayerShooting : MonoBehaviour {
 
         //remove a rocket
         numRockets--;
-        UpdateRocketCount();
+        UpdateRocketCountText();
         if(numRockets <= 0) rocketArt.SetActive(false);
     }
 
-    private void UpdateRocketCount() {
+    private void UpdateRocketCountText() {
         if(numRockets < 10) {
             rocketCountText.text = "0" + numRockets;
         } else {
