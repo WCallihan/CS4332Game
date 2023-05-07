@@ -1161,7 +1161,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  gravity: -9.81
+  gravity: -30
   jumpHeight: 3
   jumpSound: {fileID: 8300000, guid: 579155170c98cce43b36f287a425459d, type: 3}
 --- !u!114 &3096262038924190599

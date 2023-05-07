@@ -43,8 +43,8 @@ public class EnemyHealth : MonoBehaviour {
         float rand = UnityEngine.Random.Range(0f, 1f);
         if(rand <= spawnChance) Instantiate(rocketPickupPrefab, new Vector3(transform.position.x, 0, transform.position.z), transform.rotation);
 
-        gameObject.SetActive(false); //deactivate game object
-		EnemyDied?.Invoke();
+        EnemyDied?.Invoke();
+        Destroy(gameObject);
     }
 	
     private IEnumerator HurtFlash() {
