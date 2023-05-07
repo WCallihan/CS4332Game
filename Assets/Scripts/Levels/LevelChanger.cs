@@ -82,8 +82,14 @@ public class LevelChanger : MonoBehaviour {
 
 	private void UnlockDoor() {
 		doorUnlocked = true;
-        if(unlockingSound && audioSource) audioSource.PlayOneShot(unlockingSound);
+        if(unlockingSound && audioSource) StartCoroutine(UnlockSoundDelay());
 	}
+
+    //add a delay to the unlocking sound so that it is not always drowned out by lasers and death noises
+    private IEnumerator UnlockSoundDelay() {
+        yield return new WaitForSeconds(1);
+        audioSource.PlayOneShot(unlockingSound);
+    }
 
 	//called by the MenuButton on the PauseScreen
 	public void GoToMainMenu() {
