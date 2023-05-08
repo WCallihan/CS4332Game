@@ -146,7 +146,7 @@ MonoBehaviour:
   lineMaxDuration: 0.1
   attackCooldown: 1
   weaponDamage: 2
-  weaponAccuracy: 85
+  weaponAccuracy: 80
   shootingSound: {fileID: 8300000, guid: e13df305808c2a348baef228cdc3bee6, type: 3}
 --- !u!135 &7151776504917662643
 SphereCollider:
