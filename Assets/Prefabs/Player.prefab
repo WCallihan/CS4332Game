@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBody: {fileID: 3096262038924190597}
-  mouseSensitivity: 100
+  mouseSensitivity: 3
 --- !u!20 &3096262038733655762
 Camera:
   m_ObjectHideFlags: 0

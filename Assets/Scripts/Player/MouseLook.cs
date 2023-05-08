@@ -7,13 +7,13 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour {
 
     [SerializeField] Transform playerBody;
-    [SerializeField] private float mouseSensitivity = 100f;
+    [SerializeField] private float mouseSensitivity = 3f;
 
     private float xRotation = 0f;
 
     void Update() {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f); //clamps the up and down rotation between -90 and 90 degrees
