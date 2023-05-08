@@ -36,6 +36,7 @@ public class PlayerPickups : MonoBehaviour {
 			} else if(inLootTrigger) {
                 Destroy(lootObj);
                 playerShoot.AddRocket();
+                if(lootPickupSound) audioSource.PlayOneShot(lootPickupSound);
                 ExitLootTrigger();
 			}
 		}
