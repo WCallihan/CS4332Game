@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1470385852}
     m_Modifications:
+    - target: {fileID: 1397057433718433353, guid: b26304e281946424c92717179f50b2c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3690131607668724421, guid: b26304e281946424c92717179f50b2c5, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -939,6 +943,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1470385852}
     m_Modifications:
+    - target: {fileID: 1397057433718433353, guid: b26304e281946424c92717179f50b2c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3690131607668724421, guid: b26304e281946424c92717179f50b2c5, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1634,6 +1642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CeilingTileLight
       objectReference: {fileID: 0}
+    - target: {fileID: 4070738984814856319, guid: b26304e281946424c92717179f50b2c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b26304e281946424c92717179f50b2c5, type: 3}
 --- !u!4 &330116644 stripped
@@ -1942,6 +1954,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1470385852}
     m_Modifications:
+    - target: {fileID: 1397057433718433353, guid: b26304e281946424c92717179f50b2c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3690131607668724421, guid: b26304e281946424c92717179f50b2c5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2670,6 +2686,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1470385852}
     m_Modifications:
+    - target: {fileID: 1397057433718433353, guid: b26304e281946424c92717179f50b2c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3690131607668724421, guid: b26304e281946424c92717179f50b2c5, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -4190,6 +4210,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1470385852}
     m_Modifications:
+    - target: {fileID: 1397057433718433353, guid: b26304e281946424c92717179f50b2c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3690131607668724421, guid: b26304e281946424c92717179f50b2c5, type: 3}
       propertyPath: m_RootOrder
       value: 2
